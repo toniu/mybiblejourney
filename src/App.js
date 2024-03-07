@@ -3,7 +3,6 @@ import Navbar from './components/Navbar.jsx'
 import Preview from './components/Preview.jsx'
 import Home from './components/Home.jsx'
 import About from './components/About.jsx'
-import Buy from './components/Buy.jsx'
 import Contact from './components/Contact.jsx'
 import Donate from './components/Donate.jsx'
 import Footer from './components/Footer.jsx'
@@ -18,12 +17,11 @@ donate
 */
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-gray-900">
       <Navbar/>
       <Home/>
       <Preview/>
       <About/>
-      <Buy/>
       <Contact/>
       <Donate/>
       <Footer/>
