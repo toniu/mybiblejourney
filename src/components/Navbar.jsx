@@ -23,10 +23,10 @@ const Navbar = () => {
 
     const links = [
         { id: "home", title: "home", offset: -100 },
-        { id: "about", title: "about", offset: -100 },
+        { id: "about", title: "about", offset: -75 },
         { id: "buy", title: "buy", offset: -100 },
         { id: "contact", title: "contact", offset: -100 },
-        { id: "donate", title: "donate", offset: -100 },
+        { id: "donate", title: "charity", offset: -100 },
     ];
 
     return (
@@ -76,9 +76,9 @@ const Navbar = () => {
                                         offset={offset}
                                         smooth={true}
                                         duration={500}
-                                        className="bg-gray-900 text-white px-7 py-1 rounded-full text-lg font-normal
-                                        hover:cursor-pointer hover:bg-gray-800 transition 100"
-                                        activeClass="bg-yellow-200 text-black font-semibold hover:bg-yellow-200"
+                                        className='bg-gray-900 text-white px-7 py-1 rounded-full text-lg font-normal
+                                        hover:cursor-pointer hover:bg-gray-700 transition 100'
+                                        activeClass='bg-gray-700 text-white hover:bg-gray-800'
                                     >
                                         {title}
                                     </Link>

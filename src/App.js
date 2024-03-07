@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar.jsx'
+import Preview from './components/Preview.jsx'
 import Home from './components/Home.jsx'
 import About from './components/About.jsx'
 import Buy from './components/Buy.jsx'
@@ -20,6 +21,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <Home/>
+      <Preview/>
       <About/>
       <Buy/>
       <Contact/>
