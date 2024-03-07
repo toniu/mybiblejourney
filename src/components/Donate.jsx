@@ -147,7 +147,7 @@ const Donate = () => {
 
                                 <div className='flex flex-col  bg-white justify-center text-base md:text-lg items-center gap-4 p-6 '>
                                     <p className='font-bold'> {p.title} </p>
-                                    <p className='font-normal h-[100px] overflow-scroll text-black'> {p.description} </p>
+                                    <p className='font-normal h-[100px] overflow-scroll text-base text-black'> {p.description} </p>
                        
                                 </div>
                             </a>

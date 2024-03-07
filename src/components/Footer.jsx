@@ -9,21 +9,21 @@ const Footer = () => {
             <div className='container max-w-[1240px] text-center m-auto'>
                 <ul className='flex justify-center text-3xl'>
                     <li className='nav-item p-4'>
-                        <a href="https://github.com/toniu" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
                             className="mx-8
                             hover:text-yellow-200 transition 100">
                             <FaInstagram />
                         </a>
                     </li>
                     <li className='nav-item p-4'>
-                        <a href="https://github.com/toniu" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.threads.net/" target="_blank" rel="noopener noreferrer"
                             className="mx-8
                             hover:text-yellow-200 transition 100">
                             <FaThreads/>
                         </a>
                     </li>
                     <li className='nav-item p-4'>
-                        <a href="https://github.com/toniu" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"
                             className="mx-8
                             hover:text-yellow-200 transition 100">
                             <FaTiktok/>

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useForm } from '@formspree/react';
+import { FaPaperPlane } from "react-icons/fa";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaThreads } from "react-icons/fa6";
 
@@ -14,43 +16,56 @@ const Contact = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Here you can implement logic to send the form data
-        console.log(formData);
-    };
+    const emailKey = `${process.env.REACT_APP_EFL}`
+
+    const [state, handleSubmit] = useForm(emailKey);
+    if (state.succeeded) {
+        return (
+        <div className='block pt-20 md:pt-5 pb-20 hover:scale-110 cursor-default transition 100'>
+            <FaPaperPlane className='mx-auto text-5xl text-yellow-200' />
+            <p className='  py-2 bg-gray-900 text-yellow-200 font-bold text-xl text-center cursor-default'>
+            Message sent!
+            </p>
+            <p className='bg-gray-900 text-white text-xl text-center cursor-default'>
+            Thank you for sending your inquiry
+            </p>
+        </div>
+        )
+
+    }
 
     return (
         <div id='contact' className='relative h-screen bg-gray-900 flex justify-center items-center'>
             <div className="w-4/5 p-2 rounded-lg shadow-md">
-            <p className="text-lg font-light text-center md:text-left text-white mb-4">Got any inquries about the e-book? Get in touch and fill out the form below</p>
-            <ul className='flex justify-center md:justify-start text-2xl text-white'>
+                <p className="text-lg font-light text-center md:text-left text-white mb-4">Got any inquries about the e-book? Get in touch and fill out the form below</p>
+                <ul className='flex justify-center md:justify-start text-2xl text-white'>
                     <li className='nav-item p-4'>
-                        <a href="https://github.com/toniu" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
                             className="mx-8
                             hover:text-yellow-200 transition 100">
                             <FaInstagram />
                         </a>
                     </li>
                     <li className='nav-item p-4'>
-                        <a href="https://github.com/toniu" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.threads.net/" target="_blank" rel="noopener noreferrer"
                             className="mx-8
                             hover:text-yellow-200 transition 100">
-                            <FaThreads/>
+                            <FaThreads />
                         </a>
                     </li>
                     <li className='nav-item p-4'>
-                        <a href="https://github.com/toniu" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"
                             className="mx-8
                             hover:text-yellow-200 transition 100">
-                            <FaTiktok/>
+                            <FaTiktok />
                         </a>
                     </li>
                 </ul>
-            
-                <form onSubmit={handleSubmit} className="flex flex-wrap gap-x-5">
+
+                <form onSubmit={handleSubmit}
+                    className="flex flex-wrap gap-x-5">
                     <div className="mb-4 flex-grow">
-                        <label htmlFor="firstName" className="block text-white text-lg text-left">First Name</label>
+                        <label htmlFor="firstName" className="block text-white text-lg text-left">First Name </label>
                         <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} className="form-input mt-1 px-3 py-1 rounded-full block w-full transition-all 100 text-black hover:bg-yellow-100 focus:bg-yellow-100" required />
                     </div>
                     <div className="mb-4 flex-grow">
@@ -66,7 +81,10 @@ const Contact = () => {
                         <textarea id="message" name="message" value={formData.message} onChange={handleChange} className="form-textarea mt-1 px-3 py-1 rounded-lg block w-full transition-all text-black hover:bg-yellow-100 focus:bg-yellow-100" rows="5" required></textarea>
                     </div>
                     <div className="w-full my-2 text-center md:text-left">
-                        <button type="submit" className="bg-yellow-200 text-black text-lg py-1 px-16 rounded-full hover:bg-yellow-300 transition duration-200">submit message</button>
+                        <button type="submit"
+                            className="bg-yellow-200 text-black text-lg py-1 px-16 rounded-full hover:bg-yellow-300 transition duration-200">
+                            submit message
+                        </button>
                     </div>
                 </form>
             </div>

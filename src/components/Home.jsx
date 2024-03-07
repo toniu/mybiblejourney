@@ -14,7 +14,7 @@ const Home = () => {
             <div className='absolute inset-0 flex flex-col justify-center items-center text-white'>
                 <div className='flex flex-col md:flex-row md:w-full'>
 
-                    <img className='px-7 py-7 mx-auto md:mx-5 flex justify-center h-[200px] w-[200px] md:h-[350px] md:w-[350px] filter brightness-60 hover:scale-110 transition 100'
+                    <img className='mt-10 px-7 py-7 mx-auto md:mx-5 flex justify-center h-[200px] w-[200px] md:h-[350px] md:w-[350px] filter brightness-60 hover:scale-110 transition 100'
                         src={bookMockup} alt='book-mockup' />
 
                     <div className='w-full md:w-1/2'>
