@@ -22,11 +22,11 @@ const Contact = () => {
     if (state.succeeded) {
         return (
         <div className='block pt-20 md:pt-5 pb-20 hover:scale-110 cursor-default transition 100'>
-            <FaPaperPlane className='mx-auto text-5xl text-yellow-200' />
-            <p className='  py-2 bg-gray-900 text-yellow-200 font-bold text-xl text-center cursor-default'>
+            <FaPaperPlane className='mx-auto text-3xl md:text-5xl text-yellow-200 select-none' />
+            <p className='select-none py-2 bg-gray-900 text-yellow-200 font-bold text-base md:text-xl text-center cursor-default'>
             Message sent!
             </p>
-            <p className='bg-gray-900 text-white text-xl text-center cursor-default'>
+            <p className='select-none bg-gray-900 text-white text-base md:text-xl text-center cursor-default'>
             Thank you for sending your inquiry
             </p>
         </div>
