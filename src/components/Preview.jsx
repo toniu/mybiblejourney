@@ -56,7 +56,7 @@ const Preview = () => {
             <div className='p-10'>
                 {/* Old Testament categories */}
                 <div className='py-2 flex flex-wrap justify-center gap-x-7 gap-y-3'>
-                    {otIcons.map(({ title, img, description }) => (
+                    {otIcons.map(({ title, img }) => (
                         <div className="relative">
                             <img
                                 src={img}
@@ -65,14 +65,14 @@ const Preview = () => {
                             />
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-black rounded-full bg-opacity-90 transition duration-200 ease-in-out
                 cursor-default hover:opacity-100 focus:opacity-100">
-                                <span className="text-white text-center text-sm md:text-base font-semibold">{title}</span>
+                                <span className="text-white text-center text-sm md:text-base font-semibold select-none">{title}</span>
                             </div>
                         </div>
                     ))}
                 </div>
                 {/* New Testament categories */}
                 <div className='py-2 flex flex-wrap justify-center gap-x-7 gap-y-3'>
-                    {ntIcons.map(({ title, img, description }) => (
+                    {ntIcons.map(({ title, img }) => (
                         <div className="relative">
                             <img
                                 src={img}
@@ -81,7 +81,7 @@ const Preview = () => {
                             />
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-black rounded-full bg-opacity-90 transition duration-200 ease-in-out
                 cursor-default hover:opacity-100 focus:opacity-100">
-                                <span className="text-white text-center text-sm md:text-base font-semibold">{title}</span>
+                                <span className="text-white text-center text-sm md:text-base font-semibold select-none">{title}</span>
                             </div>
                         </div>
                     ))}
