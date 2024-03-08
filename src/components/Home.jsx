@@ -36,7 +36,6 @@ const Home = () => {
                                     duration={500}
                                     className="my-5 mx-10 block text-center bg-yellow-200 text-black px-15 py-1 rounded-full text-lg font-normal
                                 hover:cursor-pointer hover:bg-yellow-300 transition 100"
-                                    activeClass="bg-yellow-200 text-gray-900 hover:bg-yellow-200"
                                 >
                                     learn more
                                 </Link>

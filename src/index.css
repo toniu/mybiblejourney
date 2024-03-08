@@ -7,3 +7,29 @@
 body {
     font-family: 'Jost', sans-serif;
 }
+
+@keyframes slide-right {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.animate-slide-right {
+    animation: slide-right 30s linear infinite;
+}
+
+.animate-slide-left {
+    animation: slide-left 30s linear infinite;
+}
