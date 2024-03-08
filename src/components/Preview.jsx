@@ -55,7 +55,7 @@ const Preview = () => {
 
             <div className='p-10'>
                 {/* Old Testament categories */}
-                <div className='py-2 flex flex-wrap justify-center gap-x-7 gap-y-3'>
+                <div className='py-2 flex flex-wrap justify-center gap-x-7 gap-y-3 select-none'>
                     {otIcons.map(({ title, img }) => (
                         <div className="relative">
                             <img
@@ -63,7 +63,7 @@ const Preview = () => {
                                 alt={title}
                                 className='max-w-1/4 h-auto select-none drop-shadow-2xl w-[115px] md:w-[180px] rounded-full transition duration-300 ease-in-out'
                             />
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-black rounded-full bg-opacity-90 transition duration-200 ease-in-out
+                            <div className="absolute inset-0 select-none flex items-center justify-center opacity-0 bg-black rounded-full bg-opacity-90 transition duration-200 ease-in-out
                 cursor-default hover:opacity-100 focus:opacity-100">
                                 <span className="text-white text-center text-sm md:text-base font-semibold select-none">{title}</span>
                             </div>
@@ -71,7 +71,7 @@ const Preview = () => {
                     ))}
                 </div>
                 {/* New Testament categories */}
-                <div className='py-2 flex flex-wrap justify-center gap-x-7 gap-y-3'>
+                <div className='py-2 flex flex-wrap justify-center gap-x-7 gap-y-3 select-none'>
                     {ntIcons.map(({ title, img }) => (
                         <div className="relative">
                             <img
@@ -79,7 +79,7 @@ const Preview = () => {
                                 alt={title}
                                 className='max-w-1/4 h-auto select-none drop-shadow-2xl w-[115px] md:w-[180px] rounded-full transition duration-300 ease-in-out'
                             />
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-black rounded-full bg-opacity-90 transition duration-200 ease-in-out
+                            <div className="absolute inset-0 select-none flex items-center justify-center opacity-0 bg-black rounded-full bg-opacity-90 transition duration-200 ease-in-out
                 cursor-default hover:opacity-100 focus:opacity-100">
                                 <span className="text-white text-center text-sm md:text-base font-semibold select-none">{title}</span>
                             </div>

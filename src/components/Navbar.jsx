@@ -29,7 +29,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav id='navbar' className={`bg-gray-900 fixed w-full z-10 ${isScrolled && !isOpen ? 'bg-opacity-70 backdrop-blur-md' : ''}`}>
+        <nav id='navbar' className={`bg-gray-900 w-full fixed z-50 ${isScrolled && !isOpen ? 'bg-opacity-70 backdrop-blur-md' : ''}`}>
             <div className="max-w-7xl mx-auto px-2 md:px-6 lg:px-8">
                 <div className="relative flex items-center justify-between h-16">
                     <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
@@ -53,9 +53,9 @@ const Navbar = () => {
                     </div>
                     <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start">
                         {/* Logo */}
-                        <div className="flex-shrink-0 flex items-center">
+                        <div className="flex-shrink-0 flex items-center select-none">
                             <img
-                                className="block h-12 w-auto"
+                                className="block h-12 w-auto select-none"
                                 src={logo}
                                 alt="MBJ-LOGO"
                             />
@@ -109,13 +109,16 @@ const Navbar = () => {
                                 smooth={true}
                                 duration={500}
                                 onClick={() => setIsOpen(!isOpen)}
-                                className="text-white hover:bg-gray-700
+                                className="text-white hover:bg-gray-700 select-none
                                 block px-3 py-2 rounded-md text-lg hover:cursor-pointer"
                             >
                                 {title}
                             </Link>
                         ))}
                     </div>
+                    <div id='overlay'
+                    className='h-screen backdrop-blur-md bg-gray-900'
+                    onClick={() => setIsOpen(!isOpen)}/>
                 </div>
             </Transition>
         </nav>
