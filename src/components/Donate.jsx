@@ -121,8 +121,8 @@ const Donate = () => {
     };
 
     return (
-        <div id='donate' className="bg-gray-900 relative h-screen">
-            <p className='px-10 text-center md:text-left text-sm md:text-base font-light text-white w-full'>
+        <div id='donate' className="bg-gray-900 relative h-auto">
+            <p className='px-10 py-5 text-center md:text-left text-sm md:text-base font-light text-white w-full'>
             Thank you for exploring my e-book. A percentage of profits from this book will be shared for donations to Christian charities of choice. As a gesture of care and compassion, I've included links to external Christian charities here. Your support for these organizations can help make a profound difference in the lives of others. Even the choice of donation to one charity of your choice will make a difference. Together, let's spread generosity to those in need as the body of Christ.
             </p>
             <div className='w-9/12 mx-auto'>

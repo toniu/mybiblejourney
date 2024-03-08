@@ -61,7 +61,7 @@ const Preview = () => {
                             <img
                                 src={img}
                                 alt={title}
-                                className='max-w-1/4 h-auto drop-shadow-2xl w-[115px] md:w-[180px] rounded-full transition duration-300 ease-in-out'
+                                className='max-w-1/4 h-auto select-none drop-shadow-2xl w-[115px] md:w-[180px] rounded-full transition duration-300 ease-in-out'
                             />
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-black rounded-full bg-opacity-90 transition duration-200 ease-in-out
                 cursor-default hover:opacity-100 focus:opacity-100">
@@ -77,7 +77,7 @@ const Preview = () => {
                             <img
                                 src={img}
                                 alt={title}
-                                className='max-w-1/4 h-auto drop-shadow-2xl w-[115px] md:w-[180px] rounded-full transition duration-300 ease-in-out'
+                                className='max-w-1/4 h-auto select-none drop-shadow-2xl w-[115px] md:w-[180px] rounded-full transition duration-300 ease-in-out'
                             />
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-black rounded-full bg-opacity-90 transition duration-200 ease-in-out
                 cursor-default hover:opacity-100 focus:opacity-100">

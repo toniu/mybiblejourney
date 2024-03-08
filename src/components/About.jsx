@@ -5,8 +5,8 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 const About = () => {
     return (
-        <div id='about' className='relative h-screen bg-gray-900'>
-            <div className='flex flex-col md:flex-row md:w-full py-2'>
+        <div id='about' className='relative h-auto bg-gray-900'>
+            <div className='flex flex-col md:flex-row md:w-full py-10'>
                 <img className='px-5 pt-10 mx-auto md:mx-5 flex justify-center
                 h-[150px] w-[150px] md:h-[200px] md:w-[200px] rounded-full'
                     src={mbjIcon} alt='book-icon' />

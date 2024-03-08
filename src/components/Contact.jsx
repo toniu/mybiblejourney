@@ -35,9 +35,9 @@ const Contact = () => {
     }
 
     return (
-        <div id='contact' className='relative h-screen bg-gray-900 flex justify-center items-center'>
-            <div className="w-4/5 p-2 rounded-lg shadow-md">
-                <p className="text-lg font-light text-center md:text-left text-white mb-4">Got any inquries about the e-book? Get in touch and fill out the form below</p>
+        <div id='contact' className='relative h-auto bg-gray-900 flex justify-center items-center'>
+            <div className="w-4/5 px-5 py-10 rounded-lg shadow-md">
+                <p className="text-base md:text-lg font-light text-center md:text-left text-white mb-4">Got any inquries about the e-book? Get in touch and fill out the form below</p>
                 <ul className='flex justify-center md:justify-start text-2xl text-white'>
                     <li className='nav-item p-4'>
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
