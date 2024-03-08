@@ -20,7 +20,7 @@ const About = () => {
                             The inspiration for the idea came from a testimony of myself wanting to grow deep intimacy with God’s Word. Reading the bible had initially felt like a chore and nothing was going to change until I had a hunger for it. Everyday I was flicking through “verse of the day” and calling it a day… something felt missing. Surely all these different passages I was reading all connected in some way to produce a beautiful story that pointed to the truth. I had to start all over again, all the way from Genesis… to Revelation… From the Old Testament… to the New Testament… The dots truly connect. The law, the history, the wisdom, the prophecy, the gospels, the early church, the letters and the revelation. The creation once destroyed by mankind but restored by God into a new creation. Embark in this journey so that you can follow the One who is <span className='font-bold'> the way, the truth and the life. </span>
                         </p>
                         <p className='mx-2 pb-5 text-white'> - Neka Toni-Uebari </p>
-                        <a className='bg-yellow-200 text-black px-12 py-1 rounded-full text-lg font-normal
+                        <a className='bg-yellow-200 text-black px-20 py-1 rounded-full text-lg font-normal
                                 hover:cursor-pointer hover:bg-yellow-300 transition 100'
                             href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">
                             buy this e-book now
