@@ -1,6 +1,6 @@
 # MY BIBLE JOURNEY
 
-This is a React and TailwindCSS application for the official release of the e-book. The intention of this book is to provide a digestive understanding of each book of the Bible for all students of the Bible. The official website includes various features such as the home page, preview, about, contact, and charities sections.
+This is a React and TailwindCSS application for the official release of my latest e-book. The intention of this book is to provide a digestive understanding of each book of the Bible for all students of the Bible. The official website includes various features such as the home page, preview, about, contact, and charities sections.
 
 ![home](screenshots/ss-home.png) ![preview](screenshots/ss-preview.png) ![contact](screenshots/ss-contact.png)
 ## Features
