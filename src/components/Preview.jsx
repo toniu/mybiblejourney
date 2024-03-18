@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import iconsTop from '../assets/mbj-icons-top.png'
-import iconsBottom from '../assets/mbj-icons-bottom.png'
+import iconsTop from '../assets/mbj-icons-top.png';
+import iconsBottom from '../assets/mbj-icons-bottom.png';
+import { motion } from "framer-motion";
+
 /* Preview-book images */
 import otImg from '../assets/mbj-ot-show.png';
 import ntImg from '../assets/mbj-nt-show.png';
@@ -53,13 +55,17 @@ const Preview = () => {
                 <div className="h-full absolute top-0 right-full w-full bg-repeat animate-slide-left" style={{ backgroundImage: `url(${iconsTop})` }} />
             </div>
 
-            <div className='p-10'>
+            <motion.div
+            initial={{ y: 150, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false }}
+            className='p-10'>
                 {/* Old Testament categories */}
                 <div className='py-2 flex flex-wrap justify-center gap-x-7 gap-y-3 select-none'>
                     {otIcons.map(({ title, img }) => (
                         <div className="relative">
-                            <img
-                                src={img}
+                            <img src={img}
                                 alt={title}
                                 className='max-w-1/4 h-auto select-none drop-shadow-2xl w-[115px] md:w-[180px] rounded-full transition duration-300 ease-in-out'
                             />
@@ -74,8 +80,7 @@ const Preview = () => {
                 <div className='py-2 flex flex-wrap justify-center gap-x-7 gap-y-3 select-none'>
                     {ntIcons.map(({ title, img }) => (
                         <div className="relative">
-                            <img
-                                src={img}
+                            <img src={img}
                                 alt={title}
                                 className='max-w-1/4 h-auto select-none drop-shadow-2xl w-[115px] md:w-[180px] rounded-full transition duration-300 ease-in-out'
                             />
@@ -86,23 +91,28 @@ const Preview = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
 
 
 
 
 
-            <div className='px-10 mx-auto w-full block lg:flex justify-center gap-x-5'>
-                <div className='flex justify-center'>
-                    <img className='w-[200px] lg:w-[300px] hover:scale-110 hover:cursor-zoom-in transition 100'
+            <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0,  opacity: 1 }}
+            transition={{ ease: "easeOut",  duration: 1 }}
+            viewport={{ once: false }}
+            className='px-10 mx-auto w-full block lg:flex justify-center gap-x-5'>
+                <div className='p-1 flex justify-center'>
+                    <img className='w-[160px] lg:w-[300px] hover:scale-110 hover:cursor-zoom-in transition 100'
                         src={otImg} alt='old testament examples'
                         onClick={() => toggleZoom(otImg)} />
-                    <img className='w-[200px] lg:w-[300px] hover:scale-110 hover:cursor-zoom-in transition 100'
+                    <img className='w-[160px] lg:w-[300px] hover:scale-110 hover:cursor-zoom-in transition 100'
                         src={ntImg} alt='new testament examples'
                         onClick={() => toggleZoom(ntImg)} />
                 </div>
-                <div className='flex justify-center'>
-                    <img id='gnImg' className='w-[500px] lg:w-[600px] hover:scale-110 hover:cursor-zoom-in transition 100'
+                <div className='p-1 flex justify-center'>
+                    <img id='gnImg' className='w-[470px] lg:w-[600px] hover:scale-110 hover:cursor-zoom-in transition 100'
                         src={gnImg} alt='genealogies'
                         onClick={() => toggleZoom(gnImg)} />
                 </div>
@@ -112,7 +122,7 @@ const Preview = () => {
                         <img src={imageToZoom} alt={'alt'} className="max-w-full max-h-full" />
                     </div>
                 )}
-            </div>
+            </motion.div>
             <div className={iconsSliderContainer}>
                 <div className="h-full absolute top-0 left-0 w-full bg-repeat animate-slide-right" style={{ backgroundImage: `url(${iconsBottom})` }} />
                 <div className="h-full absolute top-0 left-full w-full bg-repeat animate-slide-right" style={{ backgroundImage: `url(${iconsBottom})` }} />

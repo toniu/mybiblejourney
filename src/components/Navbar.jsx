@@ -4,10 +4,12 @@ import { Transition } from '@headlessui/react';
 import logo from '../assets/mbj-icon.png';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const delayConst = 1.75;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,10 +36,13 @@ const Navbar = () => {
                 <div className="relative flex items-center justify-between h-16">
                     <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                         {/* Mobile menu button */}
-                        <button
+                        <motion.button
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: delayConst, duration: delayConst * 0.5 }}
                             type="button"
                             className="inline-flex items-center justify-center p-2 text-2xl rounded-md text-white transition 100
-                            hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            hover:text-white hover:bg-gray-700 focus:outline-none"
                             aria-controls="mobile-menu"
                             aria-expanded="false"
                             onClick={() => setIsOpen(!isOpen)}
@@ -49,23 +54,34 @@ const Navbar = () => {
                                 // Icon when menu is open
                                 <RxCross2/>
                             )}
-                        </button>
+                        </motion.button>
                     </div>
                     <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start">
                         {/* Logo */}
                         <div className="flex-shrink-0 flex items-center select-none">
-                            <img
+                            <motion.img
+                                initial={{ x: -200, rotate: -270, opacity: 0 }}
+                                animate={{ x: 0, rotate: 0, opacity: 1 }}
+                                transition={{ delay: delayConst, duration: delayConst * 0.5 }}
                                 className="block h-12 w-auto select-none"
                                 src={logo}
                                 alt="MBJ-LOGO"
                             />
-                            <h2 className="hidden lg:block h-8 mx-5 w-auto
+                            <motion.h2
+                            initial={{ x: -200, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{ delay: delayConst, duration: delayConst * 0.5 }}
+                            className="hidden lg:block h-8 mx-5 w-auto
                             text-yellow-200 font-semibold text-xl">
                                 my bible journey
-                            </h2>
+                            </motion.h2>
                         </div>
                         {/* Desktop version: Navigation links */}
-                        <div className="hidden md:flex md:ml-auto md:mr-6 my-3">
+                        <motion.div
+                        initial={{ x: -200, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: delayConst, duration: delayConst * 0.5 }}
+                        className="hidden md:flex md:ml-auto md:mr-6 my-3">
                             <div className="flex space-x-5">
                                 {links.map(({ id, title, offset }) => (
                                     <Link
@@ -83,7 +99,7 @@ const Navbar = () => {
                                     </Link>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
