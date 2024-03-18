@@ -55,12 +55,7 @@ const Preview = () => {
                 <div className="h-full absolute top-0 right-full w-full bg-repeat animate-slide-left" style={{ backgroundImage: `url(${iconsTop})` }} />
             </div>
 
-            <motion.div
-            initial={{ y: 150, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: false }}
-            className='p-10'>
+            <div className='p-10'>
                 {/* Old Testament categories */}
                 <div className='py-2 flex flex-wrap justify-center gap-x-7 gap-y-3 select-none'>
                     {otIcons.map(({ title, img }) => (
@@ -91,11 +86,7 @@ const Preview = () => {
                         </div>
                     ))}
                 </div>
-            </motion.div>
-
-
-
-
+            </div>
 
             <motion.div
             initial={{ y: 100, opacity: 0 }}
