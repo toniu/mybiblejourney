@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mybiblejourney/static/css/main.37eb14f6.css",
-    "main.js": "/mybiblejourney/static/js/main.b82a63ca.js",
+    "main.css": "/mybiblejourney/static/css/main.0b29ec1a.css",
+    "main.js": "/mybiblejourney/static/js/main.8849ae91.js",
     "static/js/453.a530dee5.chunk.js": "/mybiblejourney/static/js/453.a530dee5.chunk.js",
     "static/media/mbj-moving-bg.mp4": "/mybiblejourney/static/media/mbj-moving-bg.9f7412e6f44a2a5024ee.mp4",
     "static/media/zoom-in-img.png": "/mybiblejourney/static/media/zoom-in-img.716d534c38facc00452b.png",
@@ -36,12 +36,12 @@
     "static/media/slick.ttf": "/mybiblejourney/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/mybiblejourney/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/mybiblejourney/index.html",
-    "main.37eb14f6.css.map": "/mybiblejourney/static/css/main.37eb14f6.css.map",
-    "main.b82a63ca.js.map": "/mybiblejourney/static/js/main.b82a63ca.js.map",
+    "main.0b29ec1a.css.map": "/mybiblejourney/static/css/main.0b29ec1a.css.map",
+    "main.8849ae91.js.map": "/mybiblejourney/static/js/main.8849ae91.js.map",
     "453.a530dee5.chunk.js.map": "/mybiblejourney/static/js/453.a530dee5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37eb14f6.css",
-    "static/js/main.b82a63ca.js"
+    "static/css/main.0b29ec1a.css",
+    "static/js/main.8849ae91.js"
   ]
 }
