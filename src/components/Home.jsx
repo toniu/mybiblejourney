@@ -56,7 +56,7 @@ const Home = () => {
                                 <a className='my-3 mx-10 block text-center bg-yellow-200 text-black px-15 py-1 rounded-full text-base md:text-lg font-normal
                                 hover:cursor-pointer hover:bg-yellow-300 transition 100'
                                     href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">
-                                    buy this e-book now
+                                    coming soon
                                 </a>
                             </div>
                             

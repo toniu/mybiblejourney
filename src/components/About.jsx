@@ -23,7 +23,7 @@ const About = () => {
                         <a className='bg-yellow-200 text-black px-20 py-1 rounded-full text-lg font-normal
                                 hover:cursor-pointer hover:bg-yellow-300 transition 100'
                             href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">
-                            buy this e-book now
+                            coming soon
                         </a>
                     </div>
                 </div>
