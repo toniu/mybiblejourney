@@ -26,6 +26,7 @@ const Navbar = () => {
     const links = [
         { id: "home", title: "home", offset: -100 },
         { id: "about", title: "about", offset: -55 },
+        { id: "statement", title: "statement", offset: -55 },
         { id: "contact", title: "contact", offset: -60 },
         { id: "donate", title: "charity", offset: -100 },
     ];

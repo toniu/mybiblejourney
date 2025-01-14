@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.jsx'
 import Preview from './components/Preview.jsx'
 import Home from './components/Home.jsx'
 import About from './components/About.jsx'
+import Statement from './components/Statement.jsx'
 import Contact from './components/Contact.jsx'
 import Donate from './components/Donate.jsx'
 import Footer from './components/Footer.jsx'
@@ -22,6 +23,7 @@ function App() {
       <Home/>
       <Preview/>
       <About/>
+      <Statement/>
       <Contact/>
       <Donate/>
       <Footer/>

@@ -34,7 +34,9 @@ const Home = () => {
                     <div className='w-full md:w-1/2'>
                         <div className='text-center md:text-left'>
                             <h2 className='py-3 text-base md:text-xl font-normal text-white'> The official website of the release of the e-book</h2>
-                            <h3 className='px-4 text-xl md:text-3xl font-semibold text-yellow-200 md:border-l-4 md:border-yellow-200'> MY BIBLE JOURNEY </h3>
+                            <h3 className='px-4 text-2xl md:text-2xl font-semibold text-yellow-200 md:border-yellow-200'> MY BIBLE
+                                <h3 className='text-3xl md:text-5xl'> JOURNEY </h3>
+                            </h3>
                             <ul className='mx-5 text-left px-7 md:px-1 my-6 text-sm md:text-base font-light list-disc'>
                                 <li>access to the author's personal notes on key events, themes and takeaways of all 66 books of the bible </li>
                                 <li>gain deeper insight by exploring the relevant context of the biblical books</li>

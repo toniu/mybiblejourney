@@ -26,19 +26,19 @@ const Preview = () => {
     const [imageToZoom, setZoomImage] = useState(null);
 
     const otIcons = [
-        { title: 'Torah', img: miTorah, description: '' },
-        { title: 'History', img: miHistory, description: '' },
-        { title: 'Poetry', img: miWisdom, description: '' },
-        { title: 'Major Prophets', img: miMajor, description: '' },
-        { title: 'Minor Prophets', img: miMinor, description: '' },
+        { title: 'torah', img: miTorah, description: '' },
+        { title: 'history', img: miHistory, description: '' },
+        { title: 'poetry', img: miWisdom, description: '' },
+        { title: 'major prophets', img: miMajor, description: '' },
+        { title: 'minor prophets', img: miMinor, description: '' },
     ]
 
     const ntIcons = [
-        { title: 'Gospels', img: miGospels, description: '' },
-        { title: 'History of the early church', img: miActs, description: '' },
-        { title: `Paul's letters to the churches`, img: miPauline, description: '' },
-        { title: 'General letters', img: miGeneral, description: '' },
-        { title: 'Revelation', img: miRevelation, description: '' },
+        { title: 'gospels', img: miGospels, description: '' },
+        { title: 'history of the early church', img: miActs, description: '' },
+        { title: `paul's letters to the churches`, img: miPauline, description: '' },
+        { title: 'general letters', img: miGeneral, description: '' },
+        { title: 'revelation', img: miRevelation, description: '' },
     ]
 
     const toggleZoom = (id) => {

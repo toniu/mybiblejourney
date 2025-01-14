@@ -63,26 +63,26 @@ const Contact = () => {
                 </ul>
 
                 <form onSubmit={handleSubmit}
-                    className="flex flex-wrap gap-x-5">
+                    className="flex flex-wrap gap-x-5 text-sm md:text-base">
                     <div className="mb-4 flex-grow">
-                        <label htmlFor="firstName" className="block text-white text-lg text-left">First Name </label>
+                        <label htmlFor="firstName" className="block text-white text-left">First Name </label>
                         <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} className="form-input mt-1 px-3 py-1 rounded-full block w-full transition-all 100 text-black hover:bg-yellow-100 focus:bg-yellow-100" required />
                     </div>
                     <div className="mb-4 flex-grow">
-                        <label htmlFor="lastName" className="block text-white text-lg text-left">Last Name</label>
+                        <label htmlFor="lastName" className="block text-white text-left">Last Name</label>
                         <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} className="form-input mt-1 px-3 py-1 rounded-full block w-full transition-all 100 text-black hover:bg-yellow-100 focus:bg-yellow-100" required />
                     </div>
                     <div className="w-full mb-4">
-                        <label htmlFor="email" className="block text-white text-lg text-left">Email</label>
+                        <label htmlFor="email" className="block text-white text-left">Email</label>
                         <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="form-input mt-1 px-3 py-1 rounded-full block w-full transition-all 100 text-black hover:bg-yellow-100 focus:bg-yellow-100" required />
                     </div>
                     <div className="w-full mb-4">
-                        <label htmlFor="message" className="block text-white text-lg text-left">Message</label>
+                        <label htmlFor="message" className="block text-white text-left">Message</label>
                         <textarea id="message" name="message" value={formData.message} onChange={handleChange} className="form-textarea mt-1 px-3 py-1 rounded-lg block w-full transition-all text-black hover:bg-yellow-100 focus:bg-yellow-100" rows="5" required></textarea>
                     </div>
                     <div className="w-full my-2 text-center md:text-left">
                         <button type="submit"
-                            className="bg-yellow-200 text-black text-lg py-1 px-24 rounded-full hover:bg-yellow-300 transition duration-200">
+                            className="bg-yellow-200 text-black py-1 px-24 rounded-full hover:bg-yellow-300 transition duration-200">
                             submit
                         </button>
                     </div>
