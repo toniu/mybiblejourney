@@ -14,9 +14,9 @@ const Statement = () => {
                         className='mx-6 md:mx-12 mb-6'
                     >
                         <p className='text-xs md:text-sm tracking-widest uppercase text-yellow-200'>Statement of faith</p>
-                        <h3 className='text-xl md:text-2xl font-semibold text-white mt-2'>Core Christian Faith</h3>
+                        <h3 className='text-xl md:text-2xl font-semibold text-white mt-2'>Historic Christian Faith</h3>
                         <p className='mt-3 font-light text-gray-200'>
-                            This work is inter-denominational and stands within the historic Christian faith, as confessed in the Apostles' and Nicene Creeds and proclaimed by the apostles in the New Testament.
+                            This work stands within the ancient, apostolic faith confessed by Christians across all centuries and traditions. We affirm the Apostles' and Nicene Creeds—tested by time, embraced by Catholics, Orthodox, and Protestants alike—and proclaim the Gospel delivered once for all to the saints.
                         </p>
                     </motion.div>
 
@@ -71,9 +71,9 @@ const Statement = () => {
                         </div>
 
                         <div className='rounded-2xl border border-white/10 bg-gray-800/50 p-6'>
-                            <p className='text-yellow-200 font-semibold mb-3'>The Holy Scriptures</p>
+                            <p className='text-yellow-200 font-semibold mb-3'>The Scriptures</p>
                             <div className='text-left font-light text-white space-y-2'>
-                                <p>The Holy Scriptures of the Old and New Testaments are inspired by God and bear faithful witness to Jesus Christ.</p>
+                                <p>The sacred Scriptures of the Old and New Testaments are inspired by God and bear faithful witness to Jesus Christ - to grow in wisdom of salvation through faith in Him.</p>
                                 <p>They are authoritative, trustworthy and sufficient for teaching, correction, and training in righteousness, so that the people of God may be equipped for every good work.</p>
                             </div>
                         </div>
@@ -82,7 +82,7 @@ const Statement = () => {
                     <div className='mx-6 md:mx-12 mt-8 rounded-2xl border border-yellow-200/20 bg-gradient-to-br from-gray-800/60 to-gray-900/40 backdrop-blur-sm p-6'>
                         <p className='text-yellow-200 font-semibold mb-2'>The Apostolic Gospel</p>
                         <p className='text-sm md:text-base font-light text-gray-200'>
-                            These essentials reflect the gospel proclaimed in the Epistles: Jesus Christ crucified and risen, salvation by grace through faith, the indwelling Holy Spirit, and the blessed hope of His appearing.
+                            These essentials reflect the Gospel proclaimed by the apostles, guarded by the Church Fathers, reaffirmed by the Reformers, and confessed by believers today: Jesus Christ crucified and risen, salvation by grace through faith, the indwelling Holy Spirit, and the blessed hope of His appearing. This is the faith <strong className="font-semibold">"once for all delivered to the saints" (Jude 1:3)</strong>, tested by centuries, treasured across traditions.
                         </p>
                     </div>
                 </div>

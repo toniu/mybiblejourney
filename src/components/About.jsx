@@ -120,7 +120,7 @@ const About = () => {
                             transition={{ duration: 0.5, delay: 0.4 }}
                             className='mx-5 px-2 md:px-1 my-4 text-sm md:text-base font-light text-white'
                         >
-                            <span className='font-bold'>My Bible Journey</span> is a collection of personal Bible notes designed to help Christians grasp the Bible's unified story—its context, themes, storyline, and key theological insights.
+                            <span className='font-bold'>My Bible Journey</span> offers a Christ-centered reading of Scripture, following the pattern established by the early Church and affirmed by believers across centuries—from the Church Fathers to the Reformers to Christians today.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +129,7 @@ const About = () => {
                             transition={{ duration: 0.5, delay: 0.5 }}
                             className='mx-5 px-2 md:px-1 my-4 text-sm md:text-base font-light text-white'
                         >
-                            Each book is summarised according to its purpose and interpreted through the Christ-centered lens taught by Jesus and the Apostles, revealing how the Hebrew Scriptures find their fulfillment in Christ and His finished work.
+                            Each book is explored through the lens taught by Jesus and His apostles: the Hebrew Scriptures—what we call the Old Testament—are illuminated and fulfilled in Christ. This isn't a new interpretation; it's the historic Christian way of reading Scripture, practised by the Church from the beginning. The Scriptures of Israel remain God's living Word, now seen in the light of their intended goal—the Messiah.
                         </motion.p>
 
                         <motion.div
@@ -165,7 +165,7 @@ const About = () => {
 
                                 <p className='relative text-yellow-200 font-semibold mb-3'>New to the Bible?</p>
                                 <p className='relative text-sm md:text-base font-light text-white'>
-                                    The Bible is a sacred library revealing one unified covenant story that culminates in Jesus Christ. Start with the Gospels - they provide eyewitness testimony of Jesus' life, ministry, death, and resurrection.
+                                    The Bible is a sacred library revealing God's covenant with humanity. Christians across all traditions—Catholic, Orthodox, and Protestant—share this treasure. Start with the Gospels: eyewitness accounts of Jesus' life, death, and resurrection that have transformed lives for two thousand years.
                                 </p>
                             </motion.div>
                         </motion.div>
@@ -202,19 +202,19 @@ const About = () => {
                                     <FaQuoteLeft className='block mx-0 text-base md:text-xl text-gray-500 font-bold' />
                                 </motion.div>
                                 <p>
-                                    Thank you for exploring this book. The inspiration came from a personal testimony - a journey from spiritual disconnection to clarity through Scripture.
+                                    Thank you for exploring this book. The inspiration came from a personal journey—from spiritual disconnection to clarity through Scripture, guided by the witness of the historic Church.
                                 </p>
                                 <p>
-                                    Reading the Bible once felt like a chore. I'd scroll through a "verse of the day" and move on, but something was missing. Surely these passages were connected, weaving together a beautiful story pointing to God's truth. So I started over - Genesis to Revelation - and the dots connected when I had the person in mind.
+                                    Reading the Bible once felt fragmented and like a chore. I'd read isolated verses (think "verse of the day" on Bible apps), but I sensed they formed a coherent story. So I began again — Genesis to Revelation, creation to new creation — and everything connected when I discovered what the early Christians knew: <span className='font-semibold'>all Scripture testifies to Christ</span>.
                                 </p>
                                 <p>
-                                    Jesus and the New Testament writers unlocked the Old Testament (the Hebrew Bible re-arranged), revealing Christ at the centre of it all. The <span className='font-semibold text-yellow-200'>Logos</span> - the eternal Word of God made human flesh - has always been present. Jesus shows us that Scripture is God-breathed, testifying to Him as the Son who fully reveals the Father through the Spirit.
+                                    As Jesus Himself taught the disciples after His resurrection, <strong className="font-semibold">beginning with Moses and all the Prophets, He interpreted to them in all the Scriptures the things concerning Himself (Luke 24:27, John 5:39). </strong> This Christ-centered reading wasn't invented—it was revealed by Jesus and practised by the Church from Pentecost onwards.
                                 </p>
                                 <p>
-                                    Writing this book became its own journey - one of learning and unlearning. It drew me into deeper faith and reshaped how I understood Scripture. <span className='font-semibold'>The lens through which we read must be centred on Christ</span>, who brings clarity to the shadows and mysteries of God's revelation.
+                                    Writing became my own journey of formation—learning, unlearning, and being shaped by the <span className='font-semibold text-yellow-200'>Logos</span>, the eternal Word made flesh. Scripture is God-breathed, testifying to the Son who reveals the Father through the Spirit. This Trinitarian lens—confessed in every historic creed—brings clarity to God's self-revelation.
                                 </p>
                                 <p>
-                                    The Bible presents a God who never changed - only our understanding of Him evolved. It's an invitation for the whole world to enter fellowship with the Father through the Son by the Holy Spirit. God's love came running for His creation, broken by humanity, to restore and reconcile us to Himself.
+                                    The Bible presents a God who is faithful and unchanging—the God of Abraham, Isaac, and Jacob, who fulfilled His covenant promises in Christ. Through progressive revelation, God disclosed His eternal plan of redemption, inviting all people—Jew and Gentile—to enter fellowship with the Father through the Son by the Holy Spirit. This is the Gospel proclaimed for two millennia, rooted in Israel's Scriptures and revealed in Jesus the Messiah.
                                 </p>
                             </div>
                         </motion.div>

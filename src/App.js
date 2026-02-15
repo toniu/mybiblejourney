@@ -9,20 +9,21 @@ import Donate from './components/Donate.jsx'
 import Footer from './components/Footer.jsx'
 
 /* myBibleJourney components:
-home-page
-about
-contents
-buy book
-contact (inquiries)
-donate
+  Optimized flow for eBook launch:
+  1. Home - Hook with Christ-centered value proposition
+  2. Preview - Show what they're getting
+  3. About - Author testimony & mission
+  4. Statement - Theological grounding for discerning readers
+  5. Contact - Easy outreach
+  6. Donate - Optional charitable giving
 */
 function App() {
   return (
     <div className="App bg-gray-900">
       <Navbar/>
       <Home/>
-      <About/>
       <Preview/>
+      <About/>
       <Statement/>
       <Contact/>
       <Donate/>
