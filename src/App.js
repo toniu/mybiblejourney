@@ -21,8 +21,8 @@ function App() {
     <div className="App bg-gray-900">
       <Navbar/>
       <Home/>
-      <Preview/>
       <About/>
+      <Preview/>
       <Statement/>
       <Contact/>
       <Donate/>

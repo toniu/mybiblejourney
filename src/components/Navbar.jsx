@@ -26,6 +26,7 @@ const Navbar = () => {
     const links = [
         { id: "home", title: "home", offset: -100 },
         { id: "about", title: "about", offset: -55 },
+        { id: "preview", title: "preview", offset: -55 },
         { id: "statement", title: "statement", offset: -55 },
         { id: "contact", title: "contact", offset: -60 },
         { id: "donate", title: "charity", offset: -100 },
@@ -73,7 +74,7 @@ const Navbar = () => {
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ delay: delayConst, duration: delayConst * 0.5 }}
                             className="hidden lg:block h-8 mx-5 w-auto
-                            text-yellow-200 font-semibold text-xl">
+                            text-yellow-200 font-semibold text-lg tracking-wide">
                                 my bible journey
                             </motion.h2>
                         </div>
@@ -83,7 +84,7 @@ const Navbar = () => {
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: delayConst, duration: delayConst * 0.5 }}
                         className="hidden md:flex md:ml-auto md:mr-6 my-3">
-                            <div className="flex space-x-5">
+                            <div className="flex space-x-3">
                                 {links.map(({ id, title, offset }) => (
                                     <Link
                                         key={id}
@@ -92,9 +93,9 @@ const Navbar = () => {
                                         offset={offset}
                                         smooth={true}
                                         duration={500}
-                                        className='bg-gray-900 text-white px-7 py-1 rounded-full text-lg font-normal
-                                        hover:cursor-pointer hover:bg-gray-700 transition 100'
-                                        activeClass='bg-gray-700 text-white hover:bg-gray-800'
+                                        className='text-gray-300 px-5 py-1.5 rounded-full text-sm font-normal border border-white/5 bg-gray-800/30
+                                        hover:cursor-pointer hover:bg-gray-800/60 hover:text-white hover:border-white/10 transition-all duration-200'
+                                        activeClass='bg-gray-800/70 text-yellow-200 border-yellow-200/20 hover:bg-gray-800/80'
                                     >
                                         {title}
                                     </Link>
@@ -116,7 +117,7 @@ const Navbar = () => {
                 leaveTo="opacity-0 translate-y-1"
             >
                 <div className="md:hidden" id="mobile-menu">
-                    <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900">
+                    <div className="px-4 pt-2 pb-3 space-y-2 bg-gray-900/95 border-b border-white/5">
                         {links.map(({ id, title, offset }) => (
                             <Link
                                 key={id}
@@ -126,15 +127,15 @@ const Navbar = () => {
                                 smooth={true}
                                 duration={500}
                                 onClick={() => setIsOpen(!isOpen)}
-                                className="text-white hover:bg-gray-700 select-none
-                                block px-3 py-2 rounded-md text-lg hover:cursor-pointer"
+                                className="text-gray-300 hover:bg-gray-800/60 hover:text-white select-none
+                                block px-4 py-2.5 rounded-xl text-base hover:cursor-pointer border border-white/5 bg-gray-800/30 transition-all duration-200"
                             >
                                 {title}
                             </Link>
                         ))}
                     </div>
                     <div id='overlay'
-                    className='h-screen backdrop-blur-md bg-gray-900'
+                    className='h-screen backdrop-blur-lg bg-gray-900/60'
                     onClick={() => setIsOpen(!isOpen)}/>
                 </div>
             </Transition>

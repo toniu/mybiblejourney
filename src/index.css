@@ -34,3 +34,64 @@ body {
 .animate-slide-left {
     animation: slide-left 30s linear infinite;
 }
+
+@keyframes float-slow {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+    50% {
+        transform: translateY(-18px) translateX(6px);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+}
+
+@keyframes float-slower {
+    0% {
+        transform: translateY(0px) translateX(0px) scale(1);
+    }
+    50% {
+        transform: translateY(-28px) translateX(-8px) scale(1.02);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) scale(1);
+    }
+}
+
+@keyframes light-rays {
+    0% {
+        transform: translateY(0px);
+        opacity: 0.35;
+    }
+    50% {
+        transform: translateY(-12px);
+        opacity: 0.55;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 0.35;
+    }
+}
+
+.animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-float-slower {
+    animation: float-slower 12s ease-in-out infinite;
+}
+
+.animate-rays {
+    animation: light-rays 10s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-slide-right,
+    .animate-slide-left,
+    .animate-float-slow,
+    .animate-float-slower,
+    .animate-rays {
+        animation: none !important;
+    }
+}
