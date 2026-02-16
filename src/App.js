@@ -19,7 +19,7 @@ import Footer from './components/Footer.jsx'
 */
 function App() {
   return (
-    <div className="App bg-gray-900">
+    <div className="App bg-gray-900 overflow-x-hidden">
       <Navbar/>
       <Home/>
       <Preview/>

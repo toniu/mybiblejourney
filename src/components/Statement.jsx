@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Statement = () => {
     return (
-        <div id='statement' className='relative h-auto bg-gray-900'>
+        <div id='statement' className='relative h-auto bg-gray-900 overflow-x-hidden'>
             <div className='flex flex-col md:flex-row md:w-full py-12'>
                 <div className='text-white text-sm md:text-base w-full'>
                     <motion.div

@@ -40,7 +40,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div id='home' ref={homeRef} className='relative min-h-screen h-screen bg-gray-900'>
+        <div id='home' ref={homeRef} className='relative min-h-screen h-screen bg-gray-900 overflow-x-hidden'>
 
             <div className='absolute inset-0 overflow-hidden select-none'>
                 <video
@@ -69,8 +69,8 @@ const Home = () => {
             transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
             style={{ opacity: bgOpacity }}
             className='absolute inset-0 flex flex-col justify-center items-center text-white px-4 py-16 sm:py-14 md:py-20 overflow-hidden'>
-                <div className='w-full max-w-5xl mx-auto flex flex-col justify-center h-full max-h-screen py-4 sm:py-2 md:py-4'>
-                    <div className='space-y-3 sm:space-y-3 md:space-y-3 flex-shrink'>
+                <div className='w-full max-w-5xl mx-auto flex flex-col justify-center h-full max-h-screen py-2 sm:py-2 md:py-4'>
+                    <div className='space-y-2 sm:space-y-3 md:space-y-4 flex-shrink'>
                         {/* Emotional Hook */}
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -86,7 +86,7 @@ const Home = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6, duration: 0.6 }}
-                            className='text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-4xl mx-auto px-2 text-center'
+                            className='text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-white leading-tight max-w-4xl mx-auto px-2 text-center'
                         >
                             The unified Bible story<br className='hidden md:block' />
                             <span className='text-yellow-200'> reveals Jesus Christ</span>
@@ -108,11 +108,11 @@ const Home = () => {
                             {/* Value Proposition - Streamlined */}
                             <div className='text-sm sm:text-base md:text-base text-gray-100 font-light space-y-1.5 md:space-y-2 flex-shrink-0'>
                                 <p className='flex items-center'>
-                                    <span className='text-yellow-200 mr-2 text-sm sm:text-lg flex-shrink-0'>✓</span>
+                                    <span className='text-yellow-200 mr-2 text-sm sm:text-base flex-shrink-0'>✓</span>
                                     <span className='text-left'>Trace God's covenant story from Genesis to Revelation</span>
                                 </p>
                                 <p className='flex items-center'>
-                                    <span className='text-yellow-200 mr-2 text-sm sm:text-lg flex-shrink-0'>✓</span>
+                                    <span className='text-yellow-200 mr-2 text-sm sm:text-base flex-shrink-0'>✓</span>
                                     <span className='text-left'>Rooted in the historic, orthodox faith of Jesus and the Apostles</span>
                                 </p>
                             </div>
@@ -122,9 +122,9 @@ const Home = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1.0, duration: 0.6 }}
-                            className='pt-1 md:pt-2 space-y-1.5 sm:space-y-2 text-center flex-shrink-0'
+                            className="p-4"
                         >
-                            <a className='inline-block bg-yellow-200 text-black px-8 sm:px-10 md:px-12 py-2.5 sm:py-3 md:py-3.5 rounded-full text-sm sm:text-base md:text-lg font-bold shadow-2xl shadow-yellow-200/30
+                            <a className='inline-block bg-yellow-200 text-black px-8 sm:px-10 md:px-12 py-2.5 sm:py-3 md:py-3.5 rounded-full text-xs sm:text-sm md:text-lg font-bold shadow-2xl shadow-yellow-200/30
                             hover:bg-yellow-300 hover:scale-105 transition-all duration-200'
                                 href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">
                                 Get Early Access Now
@@ -151,7 +151,7 @@ const Home = () => {
                             className='flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-3 md:gap-6 pt-2 md:pt-3 max-w-5xl mx-auto flex-shrink'
                         >
                             {/* Book Visual - Compact */}
-                            <div className='flex-shrink-0'>
+                            <div className='flex-shrink-0 p-2'>
                                 <motion.img
                                     animate={{
                                         y: [0, -6, 0],
@@ -161,7 +161,7 @@ const Home = () => {
                                         repeat: Infinity,
                                         ease: 'easeInOut'
                                     }}
-                                    className='w-20 sm:w-32 md:w-36 lg:w-40 filter drop-shadow-2xl select-none'
+                                    className='w-20 sm:w-32 md:w-36 lg:w-40 filter drop-shadow-2xl select-none hidden sm:block'
                                     src={bookMockup}
                                     alt='My Bible Journey book cover'
                                 />

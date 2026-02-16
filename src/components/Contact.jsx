@@ -169,7 +169,7 @@ const Contact = () => {
     // Success message with smooth animations
     if (showSuccess) {
         return (
-            <div id='contact' className='relative h-auto bg-gray-900 flex justify-center items-center py-16'>
+            <div id='contact' className='relative h-auto bg-gray-900 flex justify-center items-center py-16 overflow-x-hidden'>
                 <AnimatePresence mode="wait">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -250,7 +250,7 @@ const Contact = () => {
     }
 
     return (
-        <div id='contact' className='relative h-auto bg-gray-900 flex justify-center items-center py-14'>
+        <div id='contact' className='relative h-auto bg-gray-900 flex justify-center items-center py-14 overflow-x-hidden'>
             <div ref={formRef} className="w-11/12 md:w-4/5 lg:w-3/5 px-6 py-10 rounded-2xl border border-white/10 bg-gray-800/40 shadow-xl">
                 <motion.div
                     initial={{ opacity: 0, y: 8 }}

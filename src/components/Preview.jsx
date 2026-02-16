@@ -51,7 +51,7 @@ const Preview = () => {
     const iconsSliderContainer = "w-full h-[330px] overflow-hidden relative";
 
     return (
-        <div id='preview' ref={sectionRef} className='relative h-auto md:h-auto pb-12 lg:pb-3 bg-gray-900'>
+        <div id='preview' ref={sectionRef} className='relative h-auto md:h-auto pb-12 lg:pb-3 bg-gray-900 overflow-x-hidden'>
             <div className={iconsSliderContainer}>
                 <div className='absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30' />
                 <div className={`h-full absolute top-0 right-0 w-full bg-repeat ${isMarqueeInView ? 'animate-slide-left' : ''}`} style={{ backgroundImage: `url(${iconsTop})` }} />

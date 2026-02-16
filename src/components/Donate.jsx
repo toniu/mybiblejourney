@@ -121,7 +121,7 @@ const Donate = () => {
     };
 
     return (
-        <div id='donate' className="bg-gray-900 relative h-auto py-12">
+        <div id='donate' className="bg-gray-900 relative h-auto py-12 overflow-x-hidden">
             <div className='w-10/12 md:w-9/12 mx-auto'>
                 <div className='text-center md:text-left'>
                     <p className='text-xs md:text-sm tracking-widest uppercase text-yellow-200'>Charity</p>
