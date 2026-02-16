@@ -86,10 +86,10 @@ const Home = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6, duration: 0.6 }}
-                            className='text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-white leading-tight max-w-4xl mx-auto px-2 text-center'
+                            className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight max-w-4xl mx-auto px-2 text-center'
                         >
-                            The unified Bible story<br className='hidden md:block' />
-                            <span className='text-yellow-200'> reveals Jesus Christ</span>
+                            The unified Bible story
+                            <span className='text-yellow-200'> about Jesus Christ</span>
                         </motion.h1>
 
                         {/* Middle Section - Quote + Bullets (Side by Side on Desktop) */}
@@ -100,9 +100,9 @@ const Home = () => {
                             className='grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 max-w-4xl mx-auto px-2'
                         >
                             {/* Trust Signal - Augustine */}
-                            <div className='text-xs sm:text-sm md:text-base text-gray-200 font-light italic border-l-2 border-yellow-200/40 pl-3 sm:pl-4 py-2 text-left flex-shrink-0'>
-                                <p>"The Old (Testament) is in the New (Testament) revealed, the New is in the Old concealed."</p>
-                                <p className='text-[10px] sm:text-xs md:text-sm text-yellow-200/80 not-italic mt-1'>— Saint Augustine (4th century)</p>
+                            <div className='text-sm sm:text-base text-gray-200 font-light italic border-l-2 border-yellow-200/40 pl-3 sm:pl-4 py-2 text-left flex-shrink-0'>
+                                <p>"The Old (Testament) is in the New (Testament) revealed,<br/> the New is in the Old concealed."</p>
+                                <p className='text-[12.5px] sm:text-xs md:text-sm text-yellow-200/80 not-italic mt-1 font-semibold'>- Saint Augustine (4th century)</p>
                             </div>
 
                             {/* Value Proposition - Streamlined */}
@@ -124,12 +124,12 @@ const Home = () => {
                             transition={{ delay: 1.0, duration: 0.6 }}
                             className="p-4"
                         >
-                            <a className='inline-block bg-yellow-200 text-black px-8 sm:px-10 md:px-12 py-2.5 sm:py-3 md:py-3.5 rounded-full text-xs sm:text-sm md:text-lg font-bold shadow-2xl shadow-yellow-200/30
+                            <a className='inline-block bg-yellow-200 text-black px-8 sm:px-10 md:px-12 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm md:text-base font-bold shadow-2xl shadow-yellow-200/30
                             hover:bg-yellow-300 hover:scale-105 transition-all duration-200'
                                 href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">
                                 Get Early Access Now
                             </a>
-                            <div>
+                            <div className="p-2">
                                 <Link
                                     to='preview'
                                     spy={true}
@@ -168,13 +168,13 @@ const Home = () => {
                             </div>
 
                             {/* Scripture Arc - Connection Display */}
-                            <div className='flex-1 max-w-xl px-4'>
+                            <div className='flex-1 max-w-3xl px-4 w-full'>
                                 <div className='rounded-lg border border-blue-300/20 bg-gradient-to-br from-gray-800/40 to-gray-900/30 backdrop-blur-sm p-3 sm:p-3.5 md:p-5'>
                                     <div className='space-y-2 sm:space-y-1.5 md:space-y-2'>
                                         {/* Genesis 1:1 */}
                                         <div className='text-left'>
-                                            <p className='text-[9px] sm:text-[10px] md:text-xs text-blue-200/80 font-semibold mb-1'>Genesis 1:1</p>
-                                            <p className='text-[10px] sm:text-xs md:text-sm text-blue-300 italic font-light leading-relaxed'>
+                                            <p className='text-[10px] sm:text-sm text-blue-200/80 font-semibold mb-1'>Genesis 1:1</p>
+                                            <p className='text-sm md:text-base text-blue-300 italic font-light leading-relaxed'>
                                                 "In the beginning, God created the heavens and the earth."
                                             </p>
                                         </div>
@@ -188,8 +188,8 @@ const Home = () => {
                                         
                                         {/* Revelation 22:21 */}
                                         <div className='text-left'>
-                                            <p className='text-[9px] sm:text-[10px] md:text-xs text-blue-200/80 font-semibold mb-1'>Revelation 22:21</p>
-                                            <p className='text-[10px] sm:text-xs md:text-sm text-blue-300 italic font-light leading-relaxed'>
+                                            <p className='text-[10px] sm:text-sm text-blue-200/80 font-semibold mb-1'>Revelation 22:21</p>
+                                            <p className='text-sm md:text-base text-blue-300 italic font-light leading-relaxed'>
                                                 "The grace of the Lord Jesus be with all. Amen."
                                             </p>
                                         </div>
@@ -197,8 +197,8 @@ const Home = () => {
                                     
                                     {/* Summary */}
                                     <div className='pt-2 mt-2 border-t border-white/10'>
-                                        <p className='text-[9px] sm:text-[10px] md:text-xs text-gray-300 font-light text-center'>
-                                            One story. One Lord. One faith. One baptism. One Saviour.<br/>All Scripture pointing to Jesus Christ.
+                                        <p className='text-[12.5px] sm:text-base text-gray-300 font-light text-center'>
+                                            The one story about the One Saviour who is united with <br className=""/>the one Body, one Spirit, one Hope, one Faith and one Baptism.<br/>All Scripture reveals Jesus Christ, pointing to the One God, united in three persons -<br className="hidden md:block"/> the Father, Son, and Holy Spirit.
                                         </p>
                                     </div>
                                 </div>
