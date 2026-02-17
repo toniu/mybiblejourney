@@ -9,12 +9,17 @@ import { motion } from 'framer-motion';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [scrollProgress, setScrollProgress] = useState(0);
     const delayConst = 1.75;
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
-            setIsScrolled(scrollTop > 20); // Set the threshold as needed
+            const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            
+            setIsScrolled(scrollTop > 20);
+            setScrollProgress(scrollPercent);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -22,6 +27,19 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768 && isOpen) {
+                setIsOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [isOpen]);
 
     const links = [
         { id: "home", title: "home", offset: -100 },
@@ -33,7 +51,14 @@ const Navbar = () => {
     ];
 
     return (
-        <nav id='navbar' className={`bg-gray-900 w-full fixed z-50 ${isScrolled && !isOpen ? 'bg-opacity-70 backdrop-blur-md' : ''}`}>
+        <nav id='navbar' role='navigation' aria-label='Main navigation' className={`bg-gray-900 w-full fixed z-50 ${isScrolled && !isOpen ? 'bg-opacity-70 backdrop-blur-md' : ''}`}>
+            {/* Scroll Progress Bar */}
+            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gray-800/50" role='progressbar' aria-label='Page scroll progress' aria-valuenow={Math.round(scrollProgress)} aria-valuemin='0' aria-valuemax='100'>
+                <div 
+                    className="h-full bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-200"
+                    style={{ width: `${scrollProgress}%` }}
+                />
+            </div>
             <div className="max-w-7xl mx-auto px-2 md:px-6 lg:px-8">
                 <div className="relative flex items-center justify-between h-16">
                     <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
@@ -46,38 +71,56 @@ const Navbar = () => {
                             className="inline-flex items-center justify-center p-2 text-2xl rounded-md text-white transition 100
                             hover:text-white hover:bg-gray-700 focus:outline-none"
                             aria-controls="mobile-menu"
-                            aria-expanded="false"
+                            aria-expanded={isOpen}
+                            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
                             onClick={() => setIsOpen(!isOpen)}
                         >
                             {/* Icon when menu is closed */}
                             {!isOpen ? (
-                                <GiHamburgerMenu/>
+                                <GiHamburgerMenu aria-hidden='true' />
                             ) : (
                                 // Icon when menu is open
-                                <RxCross2/>
+                                <RxCross2 aria-hidden='true' />
                             )}
                         </motion.button>
                     </div>
                     <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start">
                         {/* Logo */}
-                        <div className="flex-shrink-0 flex items-center select-none">
+                        <Link
+                            to="home"
+                            spy={true}
+                            offset={-100}
+                            smooth={true}
+                            duration={500}
+                            onClick={() => setIsOpen(false)}
+                            className="flex-shrink-0 flex items-center select-none cursor-pointer group"
+                        >
                             <motion.img
-                                initial={{ x: -200, rotate: -270, opacity: 0 }}
-                                animate={{ x: 0, rotate: 0, opacity: 1 }}
-                                transition={{ delay: delayConst, duration: delayConst * 0.5 }}
-                                className="block h-12 w-auto select-none"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                whileHover={{ scale: 1.05, rotate: 5 }}
+                                transition={{ 
+                                    delay: delayConst, 
+                                    duration: delayConst * 0.5,
+                                    ease: "linear"
+                                }}
+                                className="block h-12 w-auto select-none group-hover:drop-shadow-[0_0_6px_rgba(254,240,138,0.3)] transition-all duration-300"
                                 src={logo}
                                 alt="MBJ-LOGO"
                             />
                             <motion.h2
-                            initial={{ x: -200, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: delayConst, duration: delayConst * 0.5 }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ 
+                                delay: delayConst, 
+                                duration: delayConst * 0.5,
+                                ease: "linear"
+                            }}
                             className="hidden lg:block h-8 mx-5 w-auto
-                            text-yellow-200 font-semibold text-lg tracking-wide">
+                            text-yellow-200 font-semibold text-lg tracking-wide group-hover:text-yellow-300 transition-colors duration-300">
                                 my bible journey
                             </motion.h2>
-                        </div>
+                        </Link>
                         {/* Desktop version: Navigation links */}
                         <motion.div
                         initial={{ x: -200, opacity: 0 }}

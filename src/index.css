@@ -17,6 +17,79 @@ body {
     overflow-x: hidden;
 }
 
+/* Custom Scrollbar Styling */
+/* For WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937; /* gray-800 */
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #fef08a 0%, #fde047 100%); /* yellow-200 to yellow-300 */
+    border-radius: 6px;
+    border: 2px solid #1f2937;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #fde047 0%, #facc15 100%); /* yellow-300 to yellow-400 */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #fef08a #1f2937; /* thumb color, track color */
+}
+
+/* Enhanced Focus States for Accessibility */
+*:focus {
+    outline: 2px solid #fef08a;
+    outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 3px solid #fef08a;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px rgba(254, 240, 138, 0.3);
+}
+
+/* Skip to content link */
+.skip-to-content:focus {
+    position: fixed !important;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    padding: 12px 20px;
+    background-color: #fef08a;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Button and link focus improvements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #fef08a;
+    outline-offset: 2px;
+}
+
+/* Ensure decorative images don't interfere with screen readers */
+img[alt=""] {
+    user-select: none;
+}
+
 @keyframes slide-right {
     from {
         transform: translateX(0%);

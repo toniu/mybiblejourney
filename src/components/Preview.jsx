@@ -81,7 +81,7 @@ const Preview = () => {
                 <div className='mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6'>
                     <div className='rounded-2xl border border-white/10 bg-gray-800/50 p-6'>
                         <p className='text-yellow-200 text-xs md:text-sm tracking-widest uppercase'>Old Testament tradition</p>
-                        <h4 className='text-lg md:text-xl text-white font-semibold mt-2'>The Hebrew Bible re‑arranged</h4>
+                        <h4 className='text-lg md:text-xl text-white font-semibold mt-2'>The Hebrew Bible's promise</h4>
                         <div className='mt-4 grid grid-cols-1 gap-4'>
                             {otIcons.map(({ title, img, description }) => (
                                 <div key={title} className='flex gap-4 items-center justify-center rounded-xl bg-gray-900/40 p-5 border border-white/5 hover:border-yellow-200/40 hover:bg-gray-900/60 hover:scale-[1.02] transition-all duration-300 ease-out group cursor-default'>
@@ -100,7 +100,7 @@ const Preview = () => {
 
                     <div className='rounded-2xl border border-white/10 bg-gray-800/50 p-6'>
                         <p className='text-yellow-200 text-xs md:text-sm tracking-widest uppercase'>New Testament tradition</p>
-                        <h4 className='text-lg md:text-xl text-white font-semibold mt-2'>The Hebrew Bible re‑interpreted in Christ</h4>
+                        <h4 className='text-lg md:text-xl text-white font-semibold mt-2'>The Hebrew Bible's fulfilment</h4>
                         <div className='mt-4 grid grid-cols-1 gap-4'>
                             {ntIcons.map(({ title, img, description }) => (
                                 <div key={title} className='flex gap-4 items-center justify-center rounded-xl bg-gray-900/40 p-5 border border-white/5 hover:border-yellow-200/40 hover:bg-gray-900/60 hover:scale-[1.02] transition-all duration-300 ease-out group cursor-default'>

@@ -1,8 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the app without crashing', () => {
+  const { container } = render(<App />);
+  // Check if the app renders
+  expect(container).toBeInTheDocument();
+});
+
+test('renders navigation bar', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  // Check if navigation links are present (using getAllByText since "Home" might appear multiple times)
+  const homeLinks = screen.queryAllByText(/Home/i);
+  expect(homeLinks.length).toBeGreaterThan(0);
 });

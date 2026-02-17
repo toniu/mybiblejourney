@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import mbjIcon from '../assets/zoom-in-img.png'
+import mbjIcon from '../assets/zoom-in-img-a.png'
 import { FaQuoteLeft } from "react-icons/fa";
 import { Link } from 'react-scroll';
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -55,8 +55,10 @@ const About = () => {
                     <div className='relative w-full h-full'>
                         <img
                             src={mbjIcon}
-                            alt='background-blur'
+                            alt=''
+                            loading='lazy'
                             className='absolute top-1/2 left-0 md:left-10 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] object-cover blur-3xl opacity-20'
+                            role='presentation'
                         />
                         {/* Dark blue gradient overlay */}
                         <div className='absolute inset-0 bg-gradient-to-br from-blue-950/40 via-slate-900/30 to-transparent'></div>
@@ -93,7 +95,8 @@ const About = () => {
                         <img
                             className='relative h-[150px] w-[150px] md:h-[200px] md:w-[200px] rounded-full ring-4 ring-yellow-200/20 shadow-2xl'
                             src={mbjIcon}
-                            alt='book-icon'
+                            alt='My Bible Journey book icon featuring an open Bible'
+                            loading='lazy'
                         />
                     </motion.div>
                 </div>
@@ -120,7 +123,7 @@ const About = () => {
                             transition={{ duration: 0.5, delay: 0.4 }}
                             className='mx-5 px-2 md:px-1 my-4 text-sm md:text-base font-light text-white'
                         >
-                            <span className='font-bold'>My Bible Journey</span> offers a Christ-centered reading of Scripture, following the pattern established by the early Church and affirmed by believers across centuries—from the Church Fathers to the Reformers to Christians today.
+                            <span className='font-bold'>My Bible Journey</span> offers a Christ-centered reading of Scripture, following the pattern established by the early Church and affirmed by believers across centuries.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +132,7 @@ const About = () => {
                             transition={{ duration: 0.5, delay: 0.5 }}
                             className='mx-5 px-2 md:px-1 my-4 text-sm md:text-base font-light text-white'
                         >
-                            Each book is explored through the lens taught by Jesus and His apostles: the Hebrew Scriptures—what we call the Old Testament—are illuminated and fulfilled in Christ. This isn't a new interpretation; it's the historic Christian way of reading Scripture, practised by the Church from the beginning. The Scriptures of Israel remain God's living Word, now seen in the light of their intended goal—the Messiah.
+                            Each book is explored through the lens taught by Jesus and His apostles: the Hebrew Scriptures—what we call the Old Testament—are illuminated and fulfilled in Christ. This isn't a new interpretation; it's the historic Christian way of reading Scripture, practised by the Church from the beginning. The Hebrew Bible remains God's living Word, now seen in the fuller light of Christ the Messiah.
                         </motion.p>
 
                         <motion.div
@@ -214,7 +217,7 @@ const About = () => {
                                     Writing became my own journey of formation—learning, unlearning, and being shaped by the <span className='font-semibold text-yellow-200'>Logos</span>, the eternal Word made flesh. Scripture is God-breathed, testifying to the Son who reveals the Father through the Spirit. This Trinitarian lens—confessed in every historic creed—brings clarity to God's self-revelation.
                                 </p>
                                 <p>
-                                    The Bible presents a God who is faithful and unchanging—the God of Abraham, Isaac, and Jacob, who fulfilled His covenant promises in Christ. Through progressive revelation, God disclosed His eternal plan of redemption, inviting all people—Jew and Gentile—to enter fellowship with the Father through the Son by the Holy Spirit. This is the Gospel proclaimed for two millennia, rooted in Israel's Scriptures and revealed in Jesus the Messiah.
+                                    The Bible presents a God who is faithful and unchanging—the God of Abraham, Isaac, and Jacob, who brings His covenant promises to fullness in Christ. Through progressive revelation, God disclosed His eternal plan of redemption, inviting all people—Jew and Gentile—into the faith of the New Covenant through the Father's Son by the Holy Spirit. This is the Gospel proclaimed for two millennia, rooted in the Hebrew Bible and revealed in Jesus the Messiah.
                                 </p>
                             </div>
                         </motion.div>

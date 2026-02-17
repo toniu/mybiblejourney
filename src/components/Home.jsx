@@ -40,7 +40,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div id='home' ref={homeRef} className='relative min-h-screen h-screen bg-gray-900 overflow-x-hidden'>
+        <div id='home' ref={homeRef} className='relative min-h-screen h-screen bg-gray-900 overflow-hidden'>
 
             <div className='absolute inset-0 overflow-hidden select-none'>
                 <video
@@ -68,7 +68,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
             style={{ opacity: bgOpacity }}
-            className='absolute inset-0 flex flex-col justify-start sm:justify-center items-center text-white px-3 sm:px-4 pt-20 pb-6 sm:pt-24 sm:pb-12 md:py-28 overflow-x-hidden'>
+            className='absolute inset-0 flex flex-col justify-start sm:justify-center items-center text-white px-3 sm:px-4 pt-20 pb-6 sm:pt-24 sm:pb-12 md:py-28 overflow-hidden'>
                 <div className='w-full max-w-5xl mx-auto flex flex-col justify-center py-1 sm:pt-8 md:pt-12 sm:pb-2 md:pb-4'>
                     <div className='space-y-2 sm:space-y-3 md:space-y-4 flex-shrink'>
                         {/* Emotional Hook */}

@@ -22,3 +22,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Documentation files (keep only README.md visible)
+PERFORMANCE.md
+TESTING.md
+SUMMARY.md
+INTEGRATION.md
+.maintenance-guide.md
