@@ -132,7 +132,7 @@ const About = () => {
                             transition={{ duration: 0.5, delay: 0.5 }}
                             className='mx-5 px-2 md:px-1 my-4 text-sm md:text-base font-light text-white'
                         >
-                            Each book is explored through the lens taught by Jesus and His apostles: the Hebrew Scriptures—what we call the Old Testament—are illuminated and fulfilled in Christ. This isn't a new interpretation; it's the historic Christian way of reading Scripture, practised by the Church from the beginning. The Hebrew Bible remains God's living Word, now seen in the fuller light of Christ the Messiah.
+                            Each book is explored through the lens taught by Jesus and His apostles: the Hebrew Scriptures—what we call the Old Testament—are illuminated and fulfilled in Christ. This isn't a new interpretation; it's the historic Christian way of reading Scripture, practised by the Church from the beginning. The Hebrew Bible testifies to God's living Word, now seen in the fuller light of Christ the Messiah.
                         </motion.p>
 
                         <motion.div
