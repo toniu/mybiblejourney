@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mybiblejourney/static/css/main.f53fcec5.css",
-    "main.js": "/mybiblejourney/static/js/main.a185adf5.js",
+    "main.css": "/mybiblejourney/static/css/main.072327ea.css",
+    "main.js": "/mybiblejourney/static/js/main.00071d82.js",
     "static/js/453.a530dee5.chunk.js": "/mybiblejourney/static/js/453.a530dee5.chunk.js",
     "static/media/mbj-moving-bg.mp4": "/mybiblejourney/static/media/mbj-moving-bg.9f7412e6f44a2a5024ee.mp4",
     "static/media/mbj-ot-show.png": "/mybiblejourney/static/media/mbj-ot-show.9158091187fa29c3e72e.png",
-    "static/media/zoom-in-img.png": "/mybiblejourney/static/media/zoom-in-img.12a6c243100f32f38e1b.png",
     "static/media/mbj-nt-show.png": "/mybiblejourney/static/media/mbj-nt-show.2c63446241f2e4518aed.png",
     "static/media/mbj-gn-show.png": "/mybiblejourney/static/media/mbj-gn-show.e846bdb71324fda11721.png",
+    "static/media/zoom-in-img-a.png": "/mybiblejourney/static/media/zoom-in-img-a.e40d99e0c058f334e1c8.png",
     "static/media/mbj-book-mockup.png": "/mybiblejourney/static/media/mbj-book-mockup.f26b8bcc6527f92a2e36.png",
     "static/media/mbj-icons-top.png": "/mybiblejourney/static/media/mbj-icons-top.8608e5794dfbce80a990.png",
     "static/media/mbj-icons-bottom.png": "/mybiblejourney/static/media/mbj-icons-bottom.ba4a6c15efe0e3804900.png",
@@ -31,17 +31,17 @@
     "static/media/mi-majorprophets.png": "/mybiblejourney/static/media/mi-majorprophets.7fde1576bf1547d08b4f.png",
     "static/media/mi-wisdom.png": "/mybiblejourney/static/media/mi-wisdom.a83d5f3a3c7c3b3b4521.png",
     "static/media/mi-general.png": "/mybiblejourney/static/media/mi-general.0949c4d8607a94fd9947.png",
+    "index.html": "/mybiblejourney/index.html",
     "static/media/slick.svg": "/mybiblejourney/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/mybiblejourney/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/mybiblejourney/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/mybiblejourney/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/mybiblejourney/index.html",
-    "main.f53fcec5.css.map": "/mybiblejourney/static/css/main.f53fcec5.css.map",
-    "main.a185adf5.js.map": "/mybiblejourney/static/js/main.a185adf5.js.map",
+    "main.072327ea.css.map": "/mybiblejourney/static/css/main.072327ea.css.map",
+    "main.00071d82.js.map": "/mybiblejourney/static/js/main.00071d82.js.map",
     "453.a530dee5.chunk.js.map": "/mybiblejourney/static/js/453.a530dee5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f53fcec5.css",
-    "static/js/main.a185adf5.js"
+    "static/css/main.072327ea.css",
+    "static/js/main.00071d82.js"
   ]
 }
