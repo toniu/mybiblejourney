@@ -71,7 +71,7 @@ const Donate = () => {
         },
         {
             title: 'World Relief',
-            description: '“Together we’re creating change that lasts—today, tomorrow and for generations to come.”',
+            description: '“Together we’re creating change that lasts - today, tomorrow and for generations to come.”',
             imageUrl: img5,
             link: 'https://worldrelief.org/?utm_source=adwords&utm_medium=ppc&utm_campaign=LM-WR-Search-GBL-All-NAV-Home&utm_term=world%20relief&gad=1',
         },
@@ -83,7 +83,7 @@ const Donate = () => {
         },
         {
             title: `Samaritan's Purse`,
-            description: '“To suffering people in a broken world, we share the news of the only One who can bring true peace—Jesus Christ, the Prince of Peace.”',
+            description: '“To suffering people in a broken world, we share the news of the only One who can bring true peace - Jesus Christ, the Prince of Peace.”',
             imageUrl: img7,
             link: 'https://www.samaritanspurse.org/',
         },

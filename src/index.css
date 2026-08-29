@@ -116,6 +116,22 @@ img[alt=""] {
     animation: slide-left 30s linear infinite;
 }
 
+@keyframes shimmer-sweep {
+    0% {
+        transform: translateX(-120%) skewX(-20deg);
+    }
+    55% {
+        transform: translateX(220%) skewX(-20deg);
+    }
+    100% {
+        transform: translateX(220%) skewX(-20deg);
+    }
+}
+
+.animate-shimmer {
+    animation: shimmer-sweep 3.5s ease-in-out infinite;
+}
+
 @keyframes float-slow {
     0% {
         transform: translateY(0px) translateX(0px);
@@ -172,7 +188,8 @@ img[alt=""] {
     .animate-slide-left,
     .animate-float-slow,
     .animate-float-slower,
-    .animate-rays {
+    .animate-rays,
+    .animate-shimmer {
         animation: none !important;
     }
 }

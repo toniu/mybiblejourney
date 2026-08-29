@@ -54,7 +54,7 @@ const NotFound = () => {
                     </p>
 
                     <p className='text-gray-400 text-sm mb-8 italic'>
-                        "Seek and you will find" — but perhaps start from the home page!
+                        "Seek and you will find" - but perhaps start from the home page!
                     </p>
 
                     {/* Action Buttons */}

@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import videoBg from '../assets/mbj-moving-bg.mp4';
 import bookMockup from '../assets/mbj-book-mockup.png';
 import { Link } from 'react-scroll';
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll, useTransform, useMotionValue, useMotionTemplate } from "framer-motion"
 import { FaChevronDown } from "react-icons/fa"
 
 const Home = () => {
@@ -10,6 +10,31 @@ const Home = () => {
     const videoRef = useRef(null);
     const { scrollYProgress } = useScroll({ target: homeRef, offset: ["start start", "end start"] });
     const bgOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+
+    // Book background layer: fades and slides as the reader scrolls past the hero
+    const bookParallaxY = useTransform(scrollYProgress, [0, 1], [0, -80]);
+    const bookOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+
+    // Cursor-reactive spotlight glow
+    const spotlightX = useMotionValue(0);
+    const spotlightY = useMotionValue(0);
+    const spotlightBg = useMotionTemplate`radial-gradient(500px circle at ${spotlightX}px ${spotlightY}px, rgba(253,224,71,0.10), transparent 70%)`;
+
+    useEffect(() => {
+        const isFinePointer = window.matchMedia('(pointer: fine)').matches;
+        if (!isFinePointer) return;
+
+        const handleMouseMove = (e) => {
+            const homeEl = homeRef.current;
+            if (!homeEl) return;
+            const rect = homeEl.getBoundingClientRect();
+            spotlightX.set(e.clientX - rect.left);
+            spotlightY.set(e.clientY - rect.top);
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, [spotlightX, spotlightY]);
 
     useEffect(() => {
         const video = videoRef.current;
@@ -57,11 +82,29 @@ const Home = () => {
                     webkit-playsinline="true"
                 />
 
+                {/* Book background layer - large and central, docked toward the bottom so it peeks up with only its base clipped */}
+                <motion.div
+                    aria-hidden
+                    style={{ y: bookParallaxY, opacity: bookOpacity }}
+                    className='absolute inset-x-0 bottom-[-16px] sm:bottom-[-28px] md:bottom-[-36px] flex justify-center pointer-events-none select-none'
+                >
+                    <motion.img
+                        animate={{ y: [0, -10, 0] }}
+                        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+                        src={bookMockup}
+                        alt=''
+                        className='w-[500px] md:w-[575px] max-w-none filter drop-shadow-2xl'
+                    />
+                </motion.div>
+
                 <div className='absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-gray-900' />
 
                 <div aria-hidden className='pointer-events-none absolute inset-0'>
                     <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-yellow-200/5 blur-[100px]' />
                 </div>
+
+                {/* Cursor-reactive spotlight - follows the pointer for a premium, tactile feel */}
+                <motion.div aria-hidden className='pointer-events-none absolute inset-0 hidden md:block' style={{ background: spotlightBg }} />
             </div>
             <motion.div
             initial={{ opacity: 0 }}
@@ -81,28 +124,6 @@ const Home = () => {
                             Bible notes for all 66 books,<br/>
                             <span className='text-yellow-200'>one unified story about Jesus Christ</span>
                         </motion.h1>
-
-                        {/* Book Visual - Hero Piece */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.6, duration: 0.6 }}
-                            className='flex justify-center py-1 sm:py-2'
-                        >
-                            <motion.img
-                                animate={{
-                                    y: [0, -8, 0],
-                                }}
-                                transition={{
-                                    duration: 4,
-                                    repeat: Infinity,
-                                    ease: 'easeInOut'
-                                }}
-                                className='w-36 sm:w-48 md:w-56 lg:w-64 filter drop-shadow-2xl select-none'
-                                src={bookMockup}
-                                alt='My Bible Journey book cover'
-                            />
-                        </motion.div>
 
                         {/* Call to Action - PROMINENT */}
                         <motion.div

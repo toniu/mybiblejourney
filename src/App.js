@@ -7,6 +7,7 @@ import Statement from './components/Statement.jsx'
 import Contact from './components/Contact.jsx'
 import Donate from './components/Donate.jsx'
 import Footer from './components/Footer.jsx'
+import StickyCTA from './components/StickyCTA.jsx'
 
 /* myBibleJourney components:
   Optimized flow for eBook launch:
@@ -28,6 +29,7 @@ function App() {
       <Contact/>
       <Donate/>
       <Footer/>
+      <StickyCTA/>
     </div>
   );
 }

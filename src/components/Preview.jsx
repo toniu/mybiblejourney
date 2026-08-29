@@ -87,7 +87,7 @@ const Preview = () => {
                     </div>
 
                     <p className='text-center text-xs md:text-sm text-gray-300 font-light mt-5 pt-4 border-t border-white/10'>
-                        One story, from Genesis to Revelation — every book points to Jesus.
+                        One story, from Genesis to Revelation - every book points to Jesus.
                     </p>
                 </div>
             </motion.div>
