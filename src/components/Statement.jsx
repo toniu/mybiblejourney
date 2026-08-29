@@ -8,7 +8,7 @@ const essentials = [
         title: 'The Triune God',
         icon: FaInfinity,
         color: 'yellow',
-        text: 'One God, Father, Son, and Holy Spirit - one in being, equal in glory, and co-eternal in majesty, Creator of heaven and earth.'
+        text: 'One God, Father, Son, and Holy Spirit - one in being, equal in glory, and co-eternal in majesty, Creator of heaven and earth, all things visible and invisible.'
     },
     {
         title: 'The Holy Scriptures',

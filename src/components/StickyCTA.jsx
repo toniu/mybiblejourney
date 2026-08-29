@@ -34,11 +34,11 @@ const StickyCTA = () => {
                     transition={{ duration: 0.3, ease: 'easeOut' }}
                     className='fixed bottom-0 left-0 right-0 z-40 bg-gray-900/90 backdrop-blur-md border-t border-white/10'
                 >
-                    <div className='max-w-5xl mx-auto flex items-center justify-between gap-3 px-4 py-2.5 sm:px-6 sm:py-3'>
+                    <div className='max-w-5xl mx-auto flex items-center gap-3 px-4 py-2.5 sm:px-6 sm:py-3'>
                         <p className='hidden sm:block text-sm text-gray-200 font-light truncate'>
                             Personal Bible notes covering all 66 books
                         </p>
-                        <div className='flex items-center gap-2 sm:gap-3 ml-auto'>
+                        <div className='flex-1 flex justify-center sm:justify-end'>
                             <a
                                 className='inline-block bg-yellow-200 text-black px-5 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg shadow-yellow-200/20 hover:bg-yellow-300 hover:scale-105 transition-all duration-200'
                                 href='https://www.amazon.com/'
@@ -47,15 +47,15 @@ const StickyCTA = () => {
                             >
                                 Get Early Access
                             </a>
-                            <button
-                                type='button'
-                                aria-label='Dismiss'
-                                onClick={() => setDismissed(true)}
-                                className='text-gray-400 hover:text-white transition-colors p-1'
-                            >
-                                <RxCross2 className='text-base sm:text-lg' />
-                            </button>
                         </div>
+                        <button
+                            type='button'
+                            aria-label='Dismiss'
+                            onClick={() => setDismissed(true)}
+                            className='shrink-0 text-gray-400 hover:text-white transition-colors p-1'
+                        >
+                            <RxCross2 className='text-base sm:text-lg' />
+                        </button>
                     </div>
                 </motion.div>
             )}

@@ -132,7 +132,7 @@ const About = () => {
                             transition={{ duration: 0.5, delay: 0.5 }}
                             className='mx-5 px-2 md:px-1 my-4 text-sm md:text-base font-light text-white'
                         >
-                            Each book is explored through the lens taught by Jesus and His apostles: the Hebrew Scriptures—what we call the Old Testament—are illuminated and fulfilled in Christ. This isn't a new interpretation; it's the historic Christian way of reading Scripture, practised by the Church from the beginning. The Hebrew Bible testifies to God's living Word, now seen in the fuller light of Christ the Messiah.
+                            Each book is explored through the lens taught by Jesus and His apostles: the Hebrew Scriptures - what we call the Old Testament - are illuminated and fulfilled in Christ. This isn't a new interpretation; it's the historic Christian way of reading Scripture, practised by the Church from the beginning. The Hebrew Bible testifies to God's living Word, now seen in the fuller light of Christ the Messiah.
                         </motion.p>
 
                         <motion.div
@@ -168,7 +168,7 @@ const About = () => {
 
                                 <p className='relative text-yellow-200 font-semibold mb-3'>New to the Bible?</p>
                                 <p className='relative text-sm md:text-base font-light text-white'>
-                                    The Bible is a sacred library revealing God's covenant with humanity. Christians across all traditions—Catholic, Orthodox, and Protestant—share this treasure. Start with the Gospels: eyewitness accounts of Jesus' life, death, and resurrection that have transformed lives for two thousand years.
+                                    The Bible is a sacred library revealing God's covenant with humanity. Start with the Gospels: eyewitness accounts of Jesus' life, death, and resurrection that have transformed lives for two thousand years.
                                 </p>
                             </motion.div>
                         </motion.div>
@@ -205,19 +205,23 @@ const About = () => {
                                     <FaQuoteLeft className='block mx-0 text-base md:text-xl text-gray-500 font-bold' />
                                 </motion.div>
                                 <p>
-                                    Thank you for exploring this book. The inspiration came from a personal journey—from spiritual disconnection to clarity through Scripture, guided by the witness of the historic Church.
+                                    Thank you for exploring this book. Its inspiration came from a personal journey - from spiritual disconnection to discovering a deeper coherence in Scripture, guided by the witness of the historic Church.
                                 </p>
+
                                 <p>
-                                    Reading the Bible once felt fragmented and like a chore. I'd read isolated verses (think "verse of the day" on Bible apps), but I sensed they formed a coherent story. So I began again — Genesis to Revelation, creation to new creation — and everything connected when I discovered what the early Christians knew: <span className='font-semibold'>all Scripture testifies to Christ</span>.
+                                    Reading the Bible once felt fragmented and like a chore. I would read isolated verses, like a "verse of the day" on Bible apps, but sensed they belonged to a larger story. So I began again - Genesis to Revelation, creation to new creation - and everything began to connect as I discovered what the early Christians knew: <span className='font-semibold'>all Scripture testifies to Christ</span>.
                                 </p>
+
                                 <p>
-                                    As Jesus Himself taught the disciples after His resurrection, <strong className="font-semibold">beginning with Moses and all the Prophets, He interpreted to them in all the Scriptures the things concerning Himself (Luke 24:27, John 5:39). </strong> This Christ-centered reading wasn't invented—it was revealed by Jesus and practised by the Church from Pentecost onwards.
+                                    As Jesus Himself taught the disciples after His resurrection, <strong className="font-semibold">beginning with Moses and all the Prophets, He interpreted to them throughout the Scriptures the things concerning Himself (Luke 24:27; John 5:39).</strong> This Christ-centred reading was not invented - it was revealed by Jesus and practised by the Church from Pentecost onwards.
                                 </p>
+
                                 <p>
-                                    Writing became my own journey of formation—learning, unlearning, and being shaped by the <span className='font-semibold text-yellow-200'>Logos</span>, the eternal Word made flesh. Scripture is God-breathed, testifying to the Son who reveals the Father through the Spirit. This Trinitarian lens—confessed in every historic creed—brings clarity to God's self-revelation.
+                                    Writing became my own journey of formation - learning, unlearning, and being shaped by the <span className='font-semibold text-yellow-200'>Logos</span>, the eternal Word made flesh. Scripture is God-breathed, bearing witness to the Son who reveals the Father through the Spirit. This Trinitarian lens, confessed in the historic Creeds, brings clarity to God's self-revelation.
                                 </p>
+
                                 <p>
-                                    The Bible presents a God who is faithful and unchanging—the God of Abraham, Isaac, and Jacob, who brings His covenant promises to fullness in Christ. Through progressive revelation, God disclosed His eternal plan of redemption, inviting all people—Jew and Gentile—into the faith of the New Covenant through the Father's Son by the Holy Spirit. This is the Gospel proclaimed for two millennia, rooted in the Hebrew Bible and revealed in Jesus the Messiah.
+                                    The Bible presents a God who is faithful and unchanging - the God of Abraham, Isaac, and Jacob, who brings His covenant promises to fullness in Christ. Through progressive revelation, God disclosed His eternal plan of redemption, inviting all people - Jew and Gentile - into the New Covenant through the Father's Son by the Holy Spirit. This is the Gospel proclaimed for two millennia, rooted in the Hebrew Scriptures and revealed in Jesus the Messiah.
                                 </p>
                             </div>
                         </motion.div>
@@ -233,7 +237,7 @@ const About = () => {
                             <div className='absolute top-0 right-0 w-40 h-40 bg-yellow-200/5 rounded-full blur-2xl' />
 
                             <p className='relative text-sm md:text-base font-light text-white'>
-                                A special thanks to <a className='font-bold text-yellow-200 hover:text-yellow-300 underline decoration-yellow-200/30 hover:decoration-yellow-300 transition-all' href="https://bibleproject.com/" target="_blank" rel="noopener noreferrer">The Bible Project</a>—their visual storytelling and insights made diving into Scripture engaging and accessible. This book draws profound inspiration from their resources. Explore their website to expand your own theological study.
+                                A special thanks to <a className='font-bold text-yellow-200 hover:text-yellow-300 underline decoration-yellow-200/30 hover:decoration-yellow-300 transition-all' href="https://bibleproject.com/" target="_blank" rel="noopener noreferrer">The Bible Project</a> - their visual storytelling and insights made diving into Scripture engaging and accessible. This book draws profound inspiration from their resources. Explore their website to expand your own theological study.
                             </p>
                         </motion.div>
 
@@ -255,9 +259,9 @@ const About = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.6 }}
-                            className='mx-5 mt-4 text-white italic'
+                            className='mx-5 mt-4 text-white font-bold'
                         >
-                            — Neka Toni-Uebari
+                            - Neka Toni-Uebari
                         </motion.p>
 
                         <motion.div

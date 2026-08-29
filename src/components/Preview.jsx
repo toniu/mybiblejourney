@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import iconsTop from '../assets/mbj-icons-top.png';
 import iconsBottom from '../assets/mbj-icons-bottom.png';
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useMotionValue, useAnimationFrame, useScroll, useSpring, useTransform, useVelocity } from "framer-motion";
 
 /* Preview-book images */
 import otImg from '../assets/mbj-ot-show.png';
@@ -21,11 +21,44 @@ import miPauline from '../assets/mi-pauline.png';
 import miGeneral from '../assets/mi-general.png';
 import miRevelation from '../assets/mi-revelation.png';
 
+// Wraps a value into [min, max) for a seamless, endlessly looping marquee position
+const wrapValue = (min, max, v) => {
+    const range = max - min;
+    return ((((v - min) % range) + range) % range) + min;
+};
+
+// Marquee that idles at a slow constant speed and speeds up with scroll velocity (parallax feel)
+const useMarqueeX = (baseVelocity, isActive) => {
+    const baseX = useMotionValue(0);
+    const { scrollY } = useScroll();
+    const scrollVelocity = useVelocity(scrollY);
+    const smoothVelocity = useSpring(scrollVelocity, { damping: 50, stiffness: 400 });
+    const velocityFactor = useTransform(smoothVelocity, [-2000, 2000], [-8, 8], { clamp: true });
+    const prefersReducedMotion = useRef(false);
+
+    useEffect(() => {
+        prefersReducedMotion.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }, []);
+
+    useAnimationFrame((t, delta) => {
+        if (!isActive || prefersReducedMotion.current) return;
+        let moveBy = baseVelocity * (delta / 1000);
+        moveBy += moveBy * velocityFactor.get();
+        baseX.set(baseX.get() + moveBy);
+    });
+
+    return useTransform(baseX, (v) => `${wrapValue(0, 100, v)}%`);
+};
+
 const Preview = () => {
     const [isZoomed, setIsZoomed] = useState(false);
     const [imageToZoom, setZoomImage] = useState(null);
     const sectionRef = useRef(null);
     const isMarqueeInView = useInView(sectionRef, { margin: '-10% 0px', once: false });
+
+    // Idle speed matches the previous 30s/100% CSS loop; scroll velocity speeds it up either way
+    const topX = useMarqueeX(100 / 30, isMarqueeInView);
+    const bottomX = useMarqueeX(100 / 30, isMarqueeInView);
 
     const otIcons = [
         { title: 'TORAH', img: miTorah, description: 'Origins of creation and God\'s covenant with Israel; the Law through Moses and the formation of God\'s people.' },
@@ -51,11 +84,11 @@ const Preview = () => {
     const iconsSliderContainer = "w-full h-[330px] overflow-hidden relative";
 
     return (
-        <div id='preview' ref={sectionRef} className='relative h-auto md:h-auto pb-12 lg:pb-3 bg-gray-900 overflow-x-hidden'>
+        <div id='preview' ref={sectionRef} className='relative z-10 -mt-28 sm:-mt-36 md:-mt-40 h-auto md:h-auto pb-12 lg:pb-3 bg-gray-900 overflow-x-hidden'>
             <div className={iconsSliderContainer}>
                 <div className='absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30' />
-                <div className={`h-full absolute top-0 right-0 w-full bg-repeat ${isMarqueeInView ? 'animate-slide-left' : ''}`} style={{ backgroundImage: `url(${iconsTop})` }} />
-                <div className={`h-full absolute top-0 right-full w-full bg-repeat ${isMarqueeInView ? 'animate-slide-left' : ''}`} style={{ backgroundImage: `url(${iconsTop})` }} />
+                <motion.div className='h-full opacity-50 absolute top-0 right-0 w-full bg-repeat' style={{ backgroundImage: `url(${iconsTop})`, x: topX }} />
+                <motion.div className='h-full opacity-50 absolute top-0 right-full w-full bg-repeat' style={{ backgroundImage: `url(${iconsTop})`, x: topX }} />
             </div>
 
             {/* Scripture Arc - John 1:1 to Revelation 22:13 */}
@@ -70,7 +103,7 @@ const Preview = () => {
                     <div className='flex flex-col sm:flex-row items-center gap-4 sm:gap-6'>
                         <div className='text-center sm:text-left flex-1'>
                             <p className='text-[10px] md:text-xs uppercase tracking-widest text-blue-200/70 font-semibold'>John 1:1</p>
-                            <p className='text-sm md:text-base text-blue-300 italic font-light mt-1'>"In the beginning was the Word, and the Word was with God, and the Word was God."</p>
+                            <p className='text-sm md:text-base text-blue-300 font-light mt-1'>"In the beginning was the Word, and the Word was with God, and the Word was God."</p>
                         </div>
 
                         <div className='flex sm:flex-col items-center gap-2 shrink-0 text-yellow-200/70'>
@@ -82,12 +115,12 @@ const Preview = () => {
 
                         <div className='text-center sm:text-right flex-1'>
                             <p className='text-[10px] md:text-xs uppercase tracking-widest text-blue-200/70 font-semibold'>Revelation 22:13</p>
-                            <p className='text-sm md:text-base text-blue-300 italic font-light mt-1'>"I am the Alpha and the Omega, the Beginning and the End."</p>
+                            <p className='text-sm md:text-base text-blue-300 font-light mt-1'>"I am the Alpha and the Omega, the Beginning and the End."</p>
                         </div>
                     </div>
 
-                    <p className='text-center text-xs md:text-sm text-gray-300 font-light mt-5 pt-4 border-t border-white/10'>
-                        One story, from Genesis to Revelation - every book points to Jesus.
+                    <p className='text-center text-xs md:text-base text-gray-300 font-light mt-5 pt-4 border-t border-white/10'>
+                        From before creation to the new creation - the revelation of God in Christ.
                     </p>
                 </div>
             </motion.div>
@@ -199,8 +232,8 @@ const Preview = () => {
             </motion.div>
             <div className={iconsSliderContainer}>
                 <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-black/10 to-black/30' />
-                <div className={`h-full absolute top-0 left-0 w-full bg-repeat ${isMarqueeInView ? 'animate-slide-right' : ''}`} style={{ backgroundImage: `url(${iconsBottom})` }} />
-                <div className={`h-full absolute top-0 left-full w-full bg-repeat ${isMarqueeInView ? 'animate-slide-right' : ''}`} style={{ backgroundImage: `url(${iconsBottom})` }} />
+                <motion.div className='h-full opacity-50 absolute top-0 right-0 w-full bg-repeat' style={{ backgroundImage: `url(${iconsBottom})`, x: bottomX }} />
+                <motion.div className='h-full opacity-50 absolute top-0 right-full w-full bg-repeat' style={{ backgroundImage: `url(${iconsBottom})`, x: bottomX }} />
             </div>
         </div>
     );
