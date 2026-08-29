@@ -58,6 +58,40 @@ const Preview = () => {
                 <div className={`h-full absolute top-0 right-full w-full bg-repeat ${isMarqueeInView ? 'animate-slide-left' : ''}`} style={{ backgroundImage: `url(${iconsTop})` }} />
             </div>
 
+            {/* Scripture Arc - John 1:1 to Revelation 22:13 */}
+            <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true }}
+                className='px-6 md:px-10 pt-10'
+            >
+                <div className='max-w-3xl mx-auto rounded-2xl border border-blue-300/10 bg-gradient-to-br from-gray-800/50 to-gray-900/30 backdrop-blur-sm p-5 md:p-7'>
+                    <div className='flex flex-col sm:flex-row items-center gap-4 sm:gap-6'>
+                        <div className='text-center sm:text-left flex-1'>
+                            <p className='text-[10px] md:text-xs uppercase tracking-widest text-blue-200/70 font-semibold'>John 1:1</p>
+                            <p className='text-sm md:text-base text-blue-300 italic font-light mt-1'>"In the beginning was the Word, and the Word was with God, and the Word was God."</p>
+                        </div>
+
+                        <div className='flex sm:flex-col items-center gap-2 shrink-0 text-yellow-200/70'>
+                            <div className='hidden sm:block h-px w-8 bg-yellow-200/30' />
+                            <span className='text-lg leading-none sm:hidden'>&#8595;</span>
+                            <span className='text-lg leading-none hidden sm:inline'>&#8594;</span>
+                            <div className='hidden sm:block h-px w-8 bg-yellow-200/30' />
+                        </div>
+
+                        <div className='text-center sm:text-right flex-1'>
+                            <p className='text-[10px] md:text-xs uppercase tracking-widest text-blue-200/70 font-semibold'>Revelation 22:13</p>
+                            <p className='text-sm md:text-base text-blue-300 italic font-light mt-1'>"I am the Alpha and the Omega, the Beginning and the End."</p>
+                        </div>
+                    </div>
+
+                    <p className='text-center text-xs md:text-sm text-gray-300 font-light mt-5 pt-4 border-t border-white/10'>
+                        One story, from Genesis to Revelation — every book points to Jesus.
+                    </p>
+                </div>
+            </motion.div>
+
             <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}

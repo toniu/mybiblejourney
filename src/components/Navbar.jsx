@@ -136,7 +136,7 @@ const Navbar = () => {
                                         offset={offset}
                                         smooth={true}
                                         duration={500}
-                                        className='text-gray-300 px-5 py-1.5 rounded-full text-sm font-normal border border-white/5 bg-gray-800/30
+                                        className='text-gray-300 tracking-wide px-5 py-1.5 rounded-full text-sm font-semibold border border-white/5 bg-gray-800/30
                                         hover:cursor-pointer hover:bg-gray-800/60 hover:text-white hover:border-white/10 transition-all duration-200'
                                         activeClass='bg-gray-800/70 text-yellow-200 border-yellow-200/20 hover:bg-gray-800/80'
                                     >
